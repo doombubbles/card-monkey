@@ -34,47 +34,47 @@
 
     <ItemGroup>
         <Reference Include="Assembly-CSharp, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Assembly-CSharp.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Assembly-CSharp.dll</HintPath>
         </Reference>
         <Reference Include="BloonsTD6 Mod Helper, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods\BloonsTD6 Mod Helper.dll</HintPath>
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods\BloonsTD6 Mod Helper.dll</HintPath>
         </Reference>
         <Reference Include="Il2Cppmscorlib, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Il2Cppmscorlib.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Il2Cppmscorlib.dll</HintPath>
         </Reference>
         <Reference Include="MelonLoader, Version=0.3.0.0, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\MelonLoader.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\MelonLoader.dll</HintPath>
         </Reference>
         <Reference Include="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-            <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\mscorlib.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\mscorlib.dll</HintPath>
         </Reference>
         <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
-            <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Newtonsoft.Json.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Newtonsoft.Json.dll</HintPath>
         </Reference>
         <Reference Include="NinjaKiwi.LiNK, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\NinjaKiwi.LiNK.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\NinjaKiwi.LiNK.dll</HintPath>
         </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
         <Reference Include="UnhollowerBaseLib, Version=0.4.13.0, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnhollowerBaseLib.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnhollowerBaseLib.dll</HintPath>
         </Reference>
         <Reference Include="Unity.ResourceManager, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Unity.ResourceManager.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Unity.ResourceManager.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.AnimationModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.AnimationModule.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.AnimationModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.AssetBundleModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.CoreModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.CoreModule.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.CoreModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.InputLegacyModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
         </Reference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -142,9 +142,9 @@
       <Content Include="README.md" />
     </ItemGroup>
 
-    <Target Name="AfterBuild">
-        <Exec Command="copy /Y &quot;C:\Users\James\RiderProjects\$(MSBuildProjectName)\obj\Debug\$(MSBuildProjectName).dll&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods\$(MSBuildProjectName).dll&quot;" />
-        <Exec Command="copy /Y &quot;C:\Users\James\RiderProjects\$(MSBuildProjectName)\obj\Debug\$(MSBuildProjectName).dll&quot; &quot;C:\Users\James\RiderProjects\$(MSBuildProjectName)\$(MSBuildProjectName).dll&quot;" />
-    </Target>
+    <PropertyGroup>
+        <RunPostBuildEvent>Always</RunPostBuildEvent>
+        <PostBuildEvent>copy "$(TargetDir)$(TargetFileName)" "C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods" /y</PostBuildEvent>
+    </PropertyGroup>
 
 </Project>

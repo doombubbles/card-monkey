@@ -8,7 +8,7 @@ namespace CardMonkey
     public class Main : BloonsTD6Mod
     {
         public override string MelonInfoCsURL =>
-            "https://github.com/doombubbles/card-monkey/main/Main.cs";
+            "https://raw.githubusercontent.com/doombubbles/card-monkey/main/CardMonkey.cs";
 
         public override string LatestURL =>
             "https://github.com/doombubbles/card-monkey/blob/main/CardMonkey.dll?raw=true";

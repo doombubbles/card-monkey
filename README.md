@@ -2,6 +2,8 @@
 
 # Card Monkey
 
+![Card Monkey](https://github.com/doombubbles/card-monkey/blob/main/CardMonkey-Icon.png?raw=true)
+
 This is the Pre-Release of the Card Monkey mod, meant to serve also as an example and template for creating a fully featured (15 upgrades, all crosspaths, custom displays) tower using BTD Mod Helper.
 
 It is currently in a very playable state, and the actual coding aspect is basically finished.

@@ -21,4 +21,6 @@ Yet to Come:
 
 **Changelog**
 
+v0.1.1 Fix Display Models
+
 v0.1.0 Pre Release

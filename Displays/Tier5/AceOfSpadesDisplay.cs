@@ -16,6 +16,8 @@ namespace CardMonkey.Displays.Tier5
 
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
+            // node.SaveMeshTexture(0);
+            // node.SaveMeshTexture(1);
             //node.SaveMeshTexture();
             //node.PrintInfo();
             

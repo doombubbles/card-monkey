@@ -1,7 +1,7 @@
 ﻿using BTD_Mod_Helper;
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(CardMonkey.Main), "Card Monkey", "0.1.0", "doombubbles")]
+[assembly: MelonInfo(typeof(CardMonkey.Main), "Card Monkey", "0.1.1", "doombubbles")]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 namespace CardMonkey
 {

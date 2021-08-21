@@ -62,10 +62,10 @@ namespace CardMonkey.Displays
         {
             if (t.Sum() == 0)  // Temporarily use the base display for all tier 3-4 crosspaths
             {
-                return tiers.Max() > 2 && tiers.Max() < 5;
+                return /*tiers.Max() > 2 && */ tiers.Max() < 5;
             }
 
-            return tiers.SequenceEqual(t);
+            return false; //tiers.SequenceEqual(t);
         }
         
         /// <summary>

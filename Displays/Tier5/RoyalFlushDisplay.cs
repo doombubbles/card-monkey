@@ -1,7 +1,9 @@
 ﻿using Assets.Scripts.Models.Towers;
 using Assets.Scripts.Unity.Display;
+using Assets.Scripts.Utils;
 using BTD_Mod_Helper.Api.Display;
 using BTD_Mod_Helper.Extensions;
+using MelonLoader;
 
 namespace CardMonkey.Displays.Tier5
 {
@@ -16,6 +18,8 @@ namespace CardMonkey.Displays.Tier5
 
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
+            // node.SaveMeshTexture(0);
+            // node.SaveMeshTexture(1);
             // node.PrintInfo();
             
             // Remove the potion in hand

@@ -9,12 +9,16 @@ namespace CardMonkey.Upgrades.TopPath
 {
     public class Pair : ModUpgrade<CardMonkey>
     {
+        // public override string Portrait => "Don't need to override this, using the default of Pair-Portrait.png";
+        // public override string Icon => "Don't need to override this, using the default of Pair-Icon.png";
+
         public override int Path => TOP;
         public override int Tier => 1;
         public override int Cost => 500;
         
+        // public override string DisplayName => "Don't need to override this, the default turns it into 'Pair'"
+        
         public override string Description => "Throws two cards at a time";
-
 
         public override void ApplyUpgrade(TowerModel tower)
         {

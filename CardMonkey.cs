@@ -2,9 +2,9 @@
 using System.Linq;
 using Assets.Scripts.Models.Towers;
 using Assets.Scripts.Models.TowerSets;
+using Assets.Scripts.Unity;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
-using CardMonkey.Displays;
 using CardMonkey.Displays.Projectiles;
 
 namespace CardMonkey
@@ -33,10 +33,9 @@ namespace CardMonkey
             towerModel.range += 10;
             var attackModel = towerModel.GetAttackModel();
             attackModel.range += 10;
-            
-            
+
             var projectile = attackModel.weapons[0].projectile;
-            projectile.ApplyDisplay<RedCardDisplay>();  // Make the projectiles look like Cards
+            projectile.ApplyDisplay<RedCardDisplay>(); // Make the projectiles look like Cards
             projectile.pierce += 2;
         }
 

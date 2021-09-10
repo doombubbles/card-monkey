@@ -14,7 +14,9 @@ namespace CardMonkey.Upgrades.MiddlePath
         public override int Path => MIDDLE;
         public override int Tier => 5;
         public override int Cost => 44440;
-        
+        public override int Priority => -3;
+
+
         public override string DisplayName => "Ace of Spades";
         public override string Description => "Aces are even more deadly, dealing extreme damage to MOAB class bloons.";
 

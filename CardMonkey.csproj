@@ -36,8 +36,8 @@
         <Reference Include="Assembly-CSharp, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
             <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Assembly-CSharp.dll</HintPath>
         </Reference>
-        <Reference Include="BloonsTD6 Mod Helper, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods\BloonsTD6 Mod Helper.dll</HintPath>
+        <Reference Include="BloonsTD6 Mod Helper, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods\BloonsTD6 Mod Helper.dll</HintPath>
         </Reference>
         <Reference Include="Il2Cppmscorlib, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
             <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Il2Cppmscorlib.dll</HintPath>
@@ -112,6 +112,7 @@
         <EmbeddedResource Include="CardMonkey-Portrait.png" />
         <EmbeddedResource Include="CardMonkey-Icon.png" />
         <EmbeddedResource Include="Displays\CardMonkeyBaseDisplay.png" />
+        <EmbeddedResource Include="Displays\Projectiles\AceOfSpadesCardDisplay.png" />
         <EmbeddedResource Include="Displays\Projectiles\BlueCardDisplay.png" />
         <EmbeddedResource Include="Displays\Projectiles\BlueWildCardDisplay.png" />
         <EmbeddedResource Include="Displays\Projectiles\GoldCardDisplay.png" />
@@ -120,7 +121,6 @@
         <EmbeddedResource Include="Displays\Projectiles\RedWildCardDisplay.png" />
         <EmbeddedResource Include="Displays\Projectiles\WildAceCardDisplay.png" />
         <EmbeddedResource Include="Displays\Tier5\AceOfSpadesCape.png" />
-        <EmbeddedResource Include="Displays\Tier5\AceOfSpadesCardDisplay.png" />
         <EmbeddedResource Include="Displays\Tier5\RoyalFlushDisplay.png" />
         <EmbeddedResource Include="Displays\Tier5\TFDisplay.png" />
         <EmbeddedResource Include="Upgrades\TopPath\Pair-Icon.png" />

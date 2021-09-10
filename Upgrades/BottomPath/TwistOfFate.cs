@@ -87,8 +87,6 @@ namespace CardMonkey.Upgrades.BottomPath
                 false, effect.effectModel);
             redCard.projectile.AddBehavior(eB);
             redCard.Rate *= 0.8f;
-            
-            FileIOUtil.SaveObject($"Towers\\{tower.name}.json", tower);
         }
     }
 }

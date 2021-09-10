@@ -10,6 +10,7 @@ namespace CardMonkey.Upgrades.TopPath
         public override int Path => TOP;
         public override int Tier => 5;
         public override int Cost => 20000;
+        public override int Priority => -2;
 
         public override string Description => "Cards do 10, 11, 12, 13 and 14 damage.";
 

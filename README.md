@@ -21,6 +21,8 @@ Yet to Come:
 
 **Changelog**
 
+v0.1.2 Support Ultimate Crosspathing
+
 v0.1.1 Fix Display Models
 
 v0.1.0 Pre Release

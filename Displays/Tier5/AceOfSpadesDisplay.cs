@@ -16,16 +16,16 @@ namespace CardMonkey.Displays.Tier5
 
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
-            // node.SaveMeshTexture(0);
-            // node.SaveMeshTexture(1);
+            //node.SaveMeshTexture(1);
+            //node.SaveMeshTexture(2);
             //node.SaveMeshTexture();
             //node.PrintInfo();
             
             node.RemoveBone("SuperMonkeyRig:Dart");
 
             // PrintInfo() showed this has multiple SkinnedMeshRenderers, so have to specify the index
-            SetMeshTexture(node, "AceOfSpadesCape", 0);
-            SetMeshTexture(node, "CardMonkeyBaseDisplay", 1);
+            SetMeshTexture(node, "AceOfSpadesCape", 1);
+            SetMeshTexture(node, "CardMonkeyBaseDisplay", 2);
         }
     }
 }

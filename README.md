@@ -21,6 +21,8 @@ Yet to Come:
 
 **Changelog**
 
+v0.1.3 Fixed for Bloons TD6 v28.0
+
 v0.1.2 Support Ultimate Crosspathing
 
 v0.1.1 Fix Display Models

@@ -22,7 +22,7 @@ namespace CardMonkey.Upgrades.TopPath
 
         public override void ApplyUpgrade(TowerModel tower)
         {
-            tower.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 2, 0, 10, null, false, false);
+            tower.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 2, 0, 10, null, false);
         }
     }
 }

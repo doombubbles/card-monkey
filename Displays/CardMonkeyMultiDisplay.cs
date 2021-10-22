@@ -73,12 +73,12 @@ namespace CardMonkey.Displays
         /// </summary>
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
+            //node.SaveMeshTexture();
             // Always set the MeshTexture to the same one, since all the cross-paths use the same original sprite atlas
             SetMeshTexture(node, nameof(CardMonkeyBaseDisplay));
             
             // Print info about the node in order to edit it easier
             // node.PrintInfo();
-            // node.SaveMeshTexture();
 
             // Make it not hold the Boomerang, name found through the PrintInfo() method above
             node.RemoveBone("SuperMonkeyRig:Dart");

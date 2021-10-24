@@ -85,6 +85,7 @@
     <ItemGroup>
         <Compile Include="Displays\CardMonkeyBaseDisplay.cs" />
         <Compile Include="Displays\CardMonkeyMultiDisplay.cs" />
+        <Compile Include="Displays\CardMonkeyParagonDisplay.cs" />
         <Compile Include="Displays\Projectiles\CardDisplays.cs" />
         <Compile Include="Displays\Tier5\AceOfSpadesDisplay.cs" />
         <Compile Include="Displays\Tier5\RoyalFlushDisplay.cs" />
@@ -96,6 +97,8 @@
         <Compile Include="Upgrades\BottomPath\SleightOfHand.cs" />
         <Compile Include="Upgrades\BottomPath\StackedDeck.cs" />
         <Compile Include="Upgrades\BottomPath\TwistOfFate.cs" />
+        <EmbeddedResource Include="Upgrades\GodKingOfSpades-Icon.png" />
+        <Compile Include="Upgrades\GodKingOfSpades.cs" />
         <Compile Include="Upgrades\MiddlePath\AceInTheHole.cs" />
         <Compile Include="Upgrades\MiddlePath\AceOfSpades.cs" />
         <Compile Include="Upgrades\MiddlePath\CutTheDeck.cs" />
@@ -143,6 +146,8 @@
 
     <ItemGroup>
       <Content Include="CardMonkey.dll" />
+      <EmbeddedResource Include="Upgrades\GodKingOfSpades-Portrait.png" />
+      <EmbeddedResource Include="Displays\CardMonkeyParagonDisplay.png" />
       <Content Include="README.md" />
     </ItemGroup>
 

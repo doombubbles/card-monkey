@@ -29,6 +29,8 @@ namespace CardMonkey
 
         // public override string DisplayName => "Don't need to override this, the default turns it into 'Card Monkey'"
 
+        public override ParagonMode ParagonMode => ParagonMode.Base555;
+
         public override void ModifyBaseTowerModel(TowerModel towerModel)
         {
             towerModel.range += 10;

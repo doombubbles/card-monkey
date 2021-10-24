@@ -15,6 +15,7 @@ namespace CardMonkey.Upgrades.TopPath
 
         public override string Description => "Throws 5 cards at a time. Cards do 1, 2, 3, 4 and 5 damage.";
 
+        public override string Portrait => "CardMonkey-Portrait";
 
         public override void ApplyUpgrade(TowerModel tower)
         {

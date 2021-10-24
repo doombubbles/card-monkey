@@ -22,6 +22,7 @@ namespace CardMonkey.Upgrades.BottomPath
         public override string DisplayName => "Twist of Fate";
         public override string Description => "Cards can explode, stun Bloons, and make Bloons give extra money.";
 
+        public override string Portrait => "CardMonkey-Portrait";
 
         public override void ApplyUpgrade(TowerModel tower)
         {

@@ -14,6 +14,8 @@ namespace CardMonkey.Upgrades.BottomPath
         public override string DisplayName => "Sleight of Hand";
         public override string Description => "Can attack Camo Bloons";
 
+        public override string Portrait => "CardMonkey-Portrait";
+        
         /// <summary>
         /// Default priority is 0, so this lower priority makes this Upgrade always apply last so that it will catch
         /// every single FilterInvisibleModel that might've been added.

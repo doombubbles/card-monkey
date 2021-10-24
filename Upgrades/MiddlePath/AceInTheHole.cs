@@ -30,6 +30,7 @@ namespace CardMonkey.Upgrades.MiddlePath
         public override string Description =>
             "Ability: Throws a super powerful Ace card that seeks Bloons along the track.";
 
+        public override string Portrait => "CardMonkey-Portrait";
 
         public override void ApplyUpgrade(TowerModel tower)
         {

@@ -15,6 +15,7 @@ namespace CardMonkey.Upgrades.BottomPath
 
         public override string Description => "Attacks extra fast permanently and with bigger range";
 
+        public override string Portrait => "CardMonkey-Portrait";
 
         public override void ApplyUpgrade(TowerModel tower)
         {

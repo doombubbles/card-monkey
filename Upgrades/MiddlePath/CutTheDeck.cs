@@ -13,6 +13,7 @@ namespace CardMonkey.Upgrades.MiddlePath
         public override string DisplayName => "Cut the Deck";
         public override string Description => "Cards have increased pierce";
 
+        public override string Portrait => "CardMonkey-Portrait";
 
         public override void ApplyUpgrade(TowerModel tower)
         {

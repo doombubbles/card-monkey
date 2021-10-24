@@ -17,6 +17,7 @@ namespace CardMonkey.Upgrades.MiddlePath
         public override string DisplayName => "Aces Wild";
         public override string Description => "Powerful Ace cards do more damage, further increased against Ceramic and Fortified Bloons.";
 
+        public override string Portrait => "CardMonkey-Portrait";
 
         public override void ApplyUpgrade(TowerModel tower)
         {

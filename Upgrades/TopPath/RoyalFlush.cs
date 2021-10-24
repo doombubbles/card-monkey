@@ -14,6 +14,7 @@ namespace CardMonkey.Upgrades.TopPath
 
         public override string Description => "Cards do 10, 11, 12, 13 and 14 damage.";
 
+        public override string Portrait => "CardMonkey-Portrait";
 
         public override void ApplyUpgrade(TowerModel tower)
         {

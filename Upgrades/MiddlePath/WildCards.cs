@@ -14,6 +14,7 @@ namespace CardMonkey.Upgrades.MiddlePath
         
         public override string Description => "Cards can damage all Bloon types";
 
+        public override string Portrait => "CardMonkey-Portrait";
 
         public override void ApplyUpgrade(TowerModel tower)
         {

@@ -20,6 +20,7 @@ namespace CardMonkey.Upgrades.MiddlePath
         public override string DisplayName => "Ace of Spades";
         public override string Description => "Aces are even more deadly, dealing extreme damage to MOAB class bloons.";
 
+        public override string Portrait => "CardMonkey-Portrait";
 
         public override void ApplyUpgrade(TowerModel tower)
         {

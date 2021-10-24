@@ -15,6 +15,7 @@ namespace CardMonkey.Upgrades.TopPath
         public override string DisplayName => "Four of a Kind";
         public override string Description => "Throws four cards at a time";
 
+        public override string Portrait => "CardMonkey-Portrait";
 
         public override void ApplyUpgrade(TowerModel tower)
         {

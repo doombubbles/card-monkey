@@ -13,12 +13,11 @@ namespace CardMonkey
     /// <summary>
     /// The main class that adds the core tower to the game
     /// </summary>
-    public class CardMonkey : ModTower
+    public class CardMonkey : ModTower<Cool>
     {
         // public override string Portrait => "Don't need to override this, using the default of Name-Portrait";
         // public override string Icon => "Don't need to override this, using the default of Name-Icon";
 
-        public override string TowerSet => PRIMARY;
         public override string BaseTower => TowerType.DartMonkey;
         public override int Cost => 400;
 
@@ -47,10 +46,11 @@ namespace CardMonkey
         /// <br/>
         /// If we didn't have this, it would just put it at the end of the Primary section
         /// </summary>
+        /*
         public override int GetTowerIndex(List<TowerDetailsModel> towerSet)
         {
             return towerSet.First(model => model.towerId == TowerType.BoomerangMonkey).towerIndex + 1;
-        }
+        }*/
 
         /// <summary>
         /// Support the Ultimate Crosspathing Mod by generating all the Tower Tiers if the mod exists

@@ -2,7 +2,10 @@
 
 # Card Monkey
 
-![Card Monkey](https://github.com/doombubbles/card-monkey/blob/main/CardMonkey-Icon.png?raw=true)
+<p float="left">
+    <img alt="Card Monkey" width="300" height="300" src="https://github.com/doombubbles/card-monkey/blob/main/CardMonkey-Icon.png?raw=true"/>
+    <img alt="Card Monkey Paragon" width="300" height="300" src="https://github.com/doombubbles/card-monkey/blob/main/Upgrades/GodKingOfSpades-Portrait.png?raw=true"/>
+</p>
 
 This is the Pre-Release of the Card Monkey mod, meant to serve also as an example and template for creating a fully featured (15 upgrades, all crosspaths, custom displays) tower using BTD Mod Helper.
 
@@ -20,6 +23,8 @@ Yet to Come:
 * More balancing on the costs and strengths of the upgrades
 
 **Changelog**
+
+v0.2.0 Added Paragon and custom Tower Set
 
 v0.1.3 Fixed for Bloons TD6 v28.0
 

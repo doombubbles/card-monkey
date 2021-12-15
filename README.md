@@ -24,6 +24,8 @@ Yet to Come:
 
 **Changelog**
 
+v0.2.1 Fix textures for BTD6 v29, remove custom tower set example
+
 v0.2.0 Added Paragon and custom Tower Set
 
 v0.1.3 Fixed for Bloons TD6 v28.0

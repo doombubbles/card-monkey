@@ -5,6 +5,7 @@ using Assets.Scripts.Unity.Display;
 using BTD_Mod_Helper.Api;
 using BTD_Mod_Helper.Api.Display;
 using BTD_Mod_Helper.Extensions;
+using MelonLoader;
 
 namespace CardMonkey.Displays
 {
@@ -73,7 +74,7 @@ namespace CardMonkey.Displays
         /// </summary>
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
-            //node.SaveMeshTexture();
+            node.SaveMeshTexture();
             // Always set the MeshTexture to the same one, since all the cross-paths use the same original sprite atlas
             SetMeshTexture(node, nameof(CardMonkeyBaseDisplay));
             

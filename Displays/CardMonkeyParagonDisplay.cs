@@ -35,6 +35,10 @@ namespace CardMonkey.Displays
 
         public override int ParagonDisplayIndex { get; }
 
+        /// <summary>
+        /// Create a display for each possible ParagonDisplayIndex
+        /// </summary>
+        /// <returns></returns>
         public override IEnumerable<ModContent> Load()
         {
             for (var i = 0; i < TotalParagonDisplays; i++)

@@ -3,6 +3,7 @@ using Assets.Scripts.Models.Towers;
 using Assets.Scripts.Unity.Display;
 using BTD_Mod_Helper.Api.Display;
 using BTD_Mod_Helper.Extensions;
+using MelonLoader;
 
 namespace CardMonkey.Displays
 {
@@ -20,7 +21,7 @@ namespace CardMonkey.Displays
         {
             // Print info about the node in order to edit it easier
             // node.PrintInfo();
-            // node.SaveMeshTexture();
+            node.SaveMeshTexture();
             
             
             // Set our custom texture

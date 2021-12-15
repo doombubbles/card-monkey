@@ -36,8 +36,8 @@
         <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Assembly-CSharp.dll</HintPath>
         </Reference>
-        <Reference Include="BloonsTD6 Mod Helper, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods\BloonsTD6 Mod Helper.dll</HintPath>
+        <Reference Include="BloonsTD6 Mod Helper, Version=2.3.2.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\steamapps\BloonsTD6\Mods\BloonsTD6 Mod Helper.dll</HintPath>
         </Reference>
         <Reference Include="Il2Cppmscorlib, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
             <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Il2Cppmscorlib.dll</HintPath>
@@ -92,7 +92,6 @@
         <Compile Include="Displays\Tier5\TFDisplay.cs" />
         <Compile Include="Main.cs" />
         <Compile Include="CardMonkey.cs" />
-        <Compile Include="Cool.cs" />
         <Compile Include="Upgrades\BottomPath\CardCounting.cs" />
         <Compile Include="Upgrades\BottomPath\MarkedCards.cs" />
         <Compile Include="Upgrades\BottomPath\SleightOfHand.cs" />
@@ -147,12 +146,8 @@
 
     <ItemGroup>
       <Content Include="CardMonkey.dll" />
-      <EmbeddedResource Include="Cool-Button.png" />
-      <EmbeddedResource Include="Cool-Container.png" />
-      <EmbeddedResource Include="Cool-ContainerLarge.png" />
       <EmbeddedResource Include="Upgrades\GodKingOfSpades-Portrait.png" />
       <EmbeddedResource Include="Displays\CardMonkeyParagonDisplay.png" />
-      <EmbeddedResource Include="Cool-Portrait.png" />
       <Content Include="README.md" />
     </ItemGroup>
 

@@ -2,7 +2,6 @@
 using Assets.Scripts.Models.Towers.Behaviors.Emissions;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
-using MelonLoader;
 
 namespace CardMonkey.Upgrades.TopPath
 {
@@ -11,7 +10,7 @@ namespace CardMonkey.Upgrades.TopPath
         public override int Path => TOP;
         public override int Tier => 2;
         public override int Cost => 700;
-        
+
         public override string DisplayName => "Three of a Kind";
         public override string Description => "Throws three cards at a time";
 

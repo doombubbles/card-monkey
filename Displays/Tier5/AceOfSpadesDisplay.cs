@@ -7,8 +7,8 @@ namespace CardMonkey.Displays.Tier5
 {
     public class AceOfSpadesDisplay : ModTowerDisplay<CardMonkey>
     {
-        public override string BaseDisplay => GetDisplay(TowerType.BoomerangMonkey, 5, 0, 0);
-        
+        public override string BaseDisplay => GetDisplay(TowerType.BoomerangMonkey, 5);
+
         public override bool UseForTower(int[] tiers)
         {
             return tiers[1] == 5;
@@ -20,7 +20,7 @@ namespace CardMonkey.Displays.Tier5
             //node.SaveMeshTexture(2);
             //node.SaveMeshTexture();
             //node.PrintInfo();
-            
+
             node.RemoveBone("SuperMonkeyRig:Dart");
 
             // PrintInfo() showed this has multiple SkinnedMeshRenderers, so have to specify the index

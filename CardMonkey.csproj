@@ -28,58 +28,22 @@
         <Optimize>true</Optimize>
         <OutputPath>bin\Release\</OutputPath>
         <DefineConstants>TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
+        <ErrorReport>prompt</ErrorReport> 
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
 
     <ItemGroup>
-        <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Assembly-CSharp.dll</HintPath>
-        </Reference>
-        <Reference Include="BloonsTD6 Mod Helper, Version=2.3.2.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\steamapps\BloonsTD6\Mods\BloonsTD6 Mod Helper.dll</HintPath>
-        </Reference>
-        <Reference Include="Il2Cppmscorlib, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Il2Cppmscorlib.dll</HintPath>
-        </Reference>
-        <Reference Include="MelonLoader, Version=0.4.3.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\MelonLoader.dll</HintPath>
-        </Reference>
-        <Reference Include="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\mscorlib.dll</HintPath>
-        </Reference>
-        <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
-            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Newtonsoft.Json.dll</HintPath>
-        </Reference>
-        <Reference Include="NinjaKiwi.LiNK, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\NinjaKiwi.LiNK.dll</HintPath>
-        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Data.DataSetExtensions" />
+        <Reference Include="Microsoft.CSharp" />
         <Reference Include="System.Data" />
+        <Reference Include="System.Net.Http" />
         <Reference Include="System.Xml" />
-        <Reference Include="UnhollowerBaseLib, Version=0.4.13.0, Culture=neutral, PublicKeyToken=null">
-            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnhollowerBaseLib.dll</HintPath>
-        </Reference>
-        <Reference Include="Unity.ResourceManager, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Unity.ResourceManager.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.AnimationModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.AnimationModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.AssetBundleModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.CoreModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.CoreModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.InputLegacyModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
-            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
-        </Reference>
+        <Reference Include="$(BloonsTD6)\Mods\BloonsTD6 Mod Helper.dll" />
     </ItemGroup>
+    <Import Project="../btd6.targets" />
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 
     <ItemGroup>
@@ -92,12 +56,12 @@
         <Compile Include="Displays\Tier5\TFDisplay.cs" />
         <Compile Include="Main.cs" />
         <Compile Include="CardMonkey.cs" />
+        <Compile Include="ModHelperData.cs" />
         <Compile Include="Upgrades\BottomPath\CardCounting.cs" />
         <Compile Include="Upgrades\BottomPath\MarkedCards.cs" />
         <Compile Include="Upgrades\BottomPath\SleightOfHand.cs" />
         <Compile Include="Upgrades\BottomPath\StackedDeck.cs" />
         <Compile Include="Upgrades\BottomPath\TwistOfFate.cs" />
-        <EmbeddedResource Include="Upgrades\GodKingOfSpades-Icon.png" />
         <Compile Include="Upgrades\GodKingOfSpades.cs" />
         <Compile Include="Upgrades\MiddlePath\AceInTheHole.cs" />
         <Compile Include="Upgrades\MiddlePath\AceOfSpades.cs" />
@@ -112,48 +76,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Include="CardMonkey-Portrait.png" />
-        <EmbeddedResource Include="CardMonkey-Icon.png" />
-        <EmbeddedResource Include="Displays\CardMonkeyBaseDisplay.png" />
-        <EmbeddedResource Include="Displays\Projectiles\AceOfSpadesCardDisplay.png" />
-        <EmbeddedResource Include="Displays\Projectiles\BlueCardDisplay.png" />
-        <EmbeddedResource Include="Displays\Projectiles\BlueWildCardDisplay.png" />
-        <EmbeddedResource Include="Displays\Projectiles\GoldCardDisplay.png" />
-        <EmbeddedResource Include="Displays\Projectiles\GoldWildCardDisplay.png" />
-        <EmbeddedResource Include="Displays\Projectiles\RedCardDisplay.png" />
-        <EmbeddedResource Include="Displays\Projectiles\RedWildCardDisplay.png" />
-        <EmbeddedResource Include="Displays\Projectiles\WildAceCardDisplay.png" />
-        <EmbeddedResource Include="Displays\Tier5\AceOfSpadesCape.png" />
-        <EmbeddedResource Include="Displays\Tier5\RoyalFlushDisplay.png" />
-        <EmbeddedResource Include="Displays\Tier5\TFDisplay.png" />
-        <EmbeddedResource Include="Upgrades\TopPath\Pair-Icon.png" />
-        <EmbeddedResource Include="Upgrades\TopPath\Pair-Portrait.png" />
-        <EmbeddedResource Include="Upgrades\BottomPath\CardCounting-Icon.png" />
-        <EmbeddedResource Include="Upgrades\BottomPath\MarkedCards-Icon.png" />
-        <EmbeddedResource Include="Upgrades\BottomPath\SleightOfHand-Icon.png" />
-        <EmbeddedResource Include="Upgrades\BottomPath\StackedDeck-Icon.png" />
-        <EmbeddedResource Include="Upgrades\BottomPath\TwistOfFate-Icon.png" />
-        <EmbeddedResource Include="Upgrades\MiddlePath\AceInTheHole-Icon.png" />
-        <EmbeddedResource Include="Upgrades\MiddlePath\AceOfSpades-Icon.png" />
-        <EmbeddedResource Include="Upgrades\MiddlePath\AcesWild-Icon.png" />
-        <EmbeddedResource Include="Upgrades\MiddlePath\CutTheDeck-Icon.png" />
-        <EmbeddedResource Include="Upgrades\MiddlePath\WildCards-Icon.png" />
-        <EmbeddedResource Include="Upgrades\TopPath\FourOfAKind-Icon.png" />
-        <EmbeddedResource Include="Upgrades\TopPath\RoyalFlush-Icon.png" />
-        <EmbeddedResource Include="Upgrades\TopPath\StraightFlush-Icon.png" />
-        <EmbeddedResource Include="Upgrades\TopPath\ThreeOfAKind-Icon.png" />
+        <Content Include="CardMonkey.dll" />
+        <Content Include="README.md" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Content Include="CardMonkey.dll" />
-      <EmbeddedResource Include="Upgrades\GodKingOfSpades-Portrait.png" />
-      <EmbeddedResource Include="Displays\CardMonkeyParagonDisplay.png" />
-      <Content Include="README.md" />
-    </ItemGroup>
-
-    <PropertyGroup>
-        <RunPostBuildEvent>Always</RunPostBuildEvent>
-        <PostBuildEvent>copy "$(TargetDir)$(TargetFileName)" "C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods" /y</PostBuildEvent>
-    </PropertyGroup>
 
 </Project>

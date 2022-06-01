@@ -33,3 +33,5 @@
 .idea/
 obj/
 *.xml
+bin/
+.vs/

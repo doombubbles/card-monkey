@@ -5,7 +5,6 @@ using Assets.Scripts.Unity.Display;
 using BTD_Mod_Helper.Api;
 using BTD_Mod_Helper.Api.Display;
 using BTD_Mod_Helper.Extensions;
-using MelonLoader;
 
 namespace CardMonkey.Displays
 {
@@ -15,20 +14,27 @@ namespace CardMonkey.Displays
     /// </summary>
     public class CardMonkeyMultiDisplay : ModTowerDisplay<CardMonkey>
     {
-        private readonly int[] t;  // The tiers used for a particular instance of CardMonkeyBaseDisplay
-        
+        private readonly int[] t; // The tiers used for a particular instance of CardMonkeyBaseDisplay
+
         /// <summary>
         /// All classes that derive from ModContent MUST have a zero argument constructor to work
         /// </summary>
         public CardMonkeyMultiDisplay()
         {
-            
         }
 
         public CardMonkeyMultiDisplay(int[] tiers)
         {
             t = tiers;
         }
+
+        /* Using the t value for various overrides */
+
+        // Have to give each Display a different name based on the tiers
+        public override string Name => nameof(CardMonkeyMultiDisplay) + "-" + t.Printed();
+
+        // Copy the corresponding Boomerang Monkey display
+        public override string BaseDisplay => GetDisplay(TowerType.BoomerangMonkey, t[0], t[1], t[2]);
 
         /// <summary>
         /// This is an example of loading multiple instances of the same ModDisplay with different values
@@ -50,25 +56,17 @@ namespace CardMonkey.Displays
                 }
             }
         }
-        
-        /* Using the t value for various overrides */
-
-        // Have to give each Display a different name based on the tiers
-        public override string Name => nameof(CardMonkeyMultiDisplay) + "-" + t.Printed();
-
-        // Copy the corresponding Boomerang Monkey display
-        public override string BaseDisplay => GetDisplay(TowerType.BoomerangMonkey, t[0], t[1], t[2]);
 
         public override bool UseForTower(int[] tiers)
         {
-            if (t.Sum() == 0)  // Temporarily use the base display for all tier 3-4 crosspaths
+            if (t.Sum() == 0) // Temporarily use the base display for all tier 3-4 crosspaths
             {
                 return /*tiers.Max() > 2 && */ tiers.Max() < 5;
             }
 
             return false; //tiers.SequenceEqual(t);
         }
-        
+
         /// <summary>
         /// All the different nodes can be modified in the same way
         /// </summary>
@@ -77,7 +75,7 @@ namespace CardMonkey.Displays
             node.SaveMeshTexture();
             // Always set the MeshTexture to the same one, since all the cross-paths use the same original sprite atlas
             SetMeshTexture(node, nameof(CardMonkeyBaseDisplay));
-            
+
             // Print info about the node in order to edit it easier
             // node.PrintInfo();
 

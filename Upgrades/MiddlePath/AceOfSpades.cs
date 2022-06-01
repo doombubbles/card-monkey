@@ -4,7 +4,6 @@ using Assets.Scripts.Models.Towers.Projectiles;
 using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
-using CardMonkey.Displays;
 using CardMonkey.Displays.Projectiles;
 
 namespace CardMonkey.Upgrades.MiddlePath
@@ -26,19 +25,19 @@ namespace CardMonkey.Upgrades.MiddlePath
         {
             tower.range += 10;
             tower.GetAttackModel().range += 10;
-            
+
             foreach (var projectile in tower.GetWeapons().Select(weaponModel => weaponModel.projectile))
             {
                 projectile.GetDamageModel().damage += 3;
-                
+
                 foreach (var damageModifierForTagModel in projectile.GetBehaviors<DamageModifierForTagModel>())
                 {
                     damageModifierForTagModel.damageAddative += 42;
                 }
-                
+
                 projectile.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Moabs", "Moabs",
                     1, 45, false, false));
-                
+
                 projectile.ApplyDisplay<AceOfSpadesCardDisplay>();
             }
 
@@ -53,6 +52,7 @@ namespace CardMonkey.Upgrades.MiddlePath
             {
                 damageModifierForTagModel.damageAddative = 2000;
             }
+
             projectileModel.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Moabs", "Moabs",
                 1, 2000, false, false));
         }

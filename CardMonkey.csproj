@@ -1,83 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{6E16F707-CA87-4811-B2DE-1B5DA4A8278D}</ProjectGuid>
-        <OutputType>Library</OutputType>
-        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <TargetFramework>net48</TargetFramework>
         <RootNamespace>CardMonkey</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <Nullable>enable</Nullable>
         <AssemblyName>CardMonkey</AssemblyName>
-        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-        <FileAlignment>512</FileAlignment>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\Debug\</OutputPath>
-        <DefineConstants>DEBUG;TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugType>pdbonly</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\Release\</OutputPath>
-        <DefineConstants>TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport> 
-        <WarningLevel>4</WarningLevel>
+    
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <Optimize>False</Optimize>
+        <DebugType>embedded</DebugType>
     </PropertyGroup>
 
-    <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Core" />
-        <Reference Include="System.Xml.Linq" />
-        <Reference Include="System.Data.DataSetExtensions" />
-        <Reference Include="Microsoft.CSharp" />
-        <Reference Include="System.Data" />
-        <Reference Include="System.Net.Http" />
-        <Reference Include="System.Xml" />
-        <Reference Include="$(BloonsTD6)\Mods\BloonsTD6 Mod Helper.dll" />
-    </ItemGroup>
-    <Import Project="../btd6.targets" />
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <Optimize>True</Optimize>
+        <DebugType>none</DebugType>
+    </PropertyGroup>
 
-    <ItemGroup>
-        <Compile Include="Displays\CardMonkeyBaseDisplay.cs" />
-        <Compile Include="Displays\CardMonkeyMultiDisplay.cs" />
-        <Compile Include="Displays\CardMonkeyParagonDisplay.cs" />
-        <Compile Include="Displays\Projectiles\CardDisplays.cs" />
-        <Compile Include="Displays\Tier5\AceOfSpadesDisplay.cs" />
-        <Compile Include="Displays\Tier5\RoyalFlushDisplay.cs" />
-        <Compile Include="Displays\Tier5\TFDisplay.cs" />
-        <Compile Include="Main.cs" />
-        <Compile Include="CardMonkey.cs" />
-        <Compile Include="ModHelperData.cs" />
-        <Compile Include="Upgrades\BottomPath\CardCounting.cs" />
-        <Compile Include="Upgrades\BottomPath\MarkedCards.cs" />
-        <Compile Include="Upgrades\BottomPath\SleightOfHand.cs" />
-        <Compile Include="Upgrades\BottomPath\StackedDeck.cs" />
-        <Compile Include="Upgrades\BottomPath\TwistOfFate.cs" />
-        <Compile Include="Upgrades\GodKingOfSpades.cs" />
-        <Compile Include="Upgrades\MiddlePath\AceInTheHole.cs" />
-        <Compile Include="Upgrades\MiddlePath\AceOfSpades.cs" />
-        <Compile Include="Upgrades\MiddlePath\CutTheDeck.cs" />
-        <Compile Include="Upgrades\MiddlePath\AcesWild.cs" />
-        <Compile Include="Upgrades\MiddlePath\WildCards.cs" />
-        <Compile Include="Upgrades\TopPath\FourOfAKind.cs" />
-        <Compile Include="Upgrades\TopPath\Pair.cs" />
-        <Compile Include="Upgrades\TopPath\RoyalFlush.cs" />
-        <Compile Include="Upgrades\TopPath\StraightFlush.cs" />
-        <Compile Include="Upgrades\TopPath\ThreeOfAKind.cs" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <Content Include="CardMonkey.dll" />
-        <Content Include="README.md" />
-    </ItemGroup>
-
+    <Import Project="..\btd6.targets" />
 </Project>

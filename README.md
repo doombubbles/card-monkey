@@ -7,6 +7,8 @@
     <img alt="Card Monkey Paragon" width="300" height="300" src="https://github.com/doombubbles/card-monkey/blob/main/Upgrades/GodKingOfSpades-Portrait.png?raw=true"/>
 </p>
 
+## NOTE: This alpha version of the mod requires BTD6 Mod Helper >v3.0
+
 This is the Pre-Release of the Card Monkey mod, meant to serve also as an example and template for creating a fully
 featured (15 upgrades, all crosspaths, custom displays) tower using BTD Mod Helper.
 

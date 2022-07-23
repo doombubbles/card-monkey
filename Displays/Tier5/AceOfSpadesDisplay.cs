@@ -16,10 +16,12 @@ namespace CardMonkey.Displays.Tier5
 
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
-            //node.SaveMeshTexture(1);
-            //node.SaveMeshTexture(2);
-            //node.SaveMeshTexture();
-            //node.PrintInfo();
+# if DEBUG
+            node.SaveMeshTexture(1);
+            node.SaveMeshTexture(2);
+            node.SaveMeshTexture();
+            node.PrintInfo();
+#endif
 
             node.RemoveBone("SuperMonkeyRig:Dart");
 

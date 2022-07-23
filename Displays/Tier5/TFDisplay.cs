@@ -18,8 +18,10 @@ namespace CardMonkey.Displays.Tier5
 
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
+#if DEBUG
             node.SaveMeshTexture(1); // used this to get the texture to edit
-            //node.PrintInfo(); // used this to get the bone names and other info
+            node.PrintInfo(); // used this to get the bone names and other info
+#endif
 
             node.RemoveBone("SuperMonkeyRig:Dart");
 

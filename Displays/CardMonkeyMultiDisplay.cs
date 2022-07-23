@@ -61,7 +61,7 @@ namespace CardMonkey.Displays
         {
             if (t.Sum() == 0) // Temporarily use the base display for all tier 3-4 crosspaths
             {
-                return /*tiers.Max() > 2 && */ tiers.Max() < 5;
+                return tiers.Max() < 5;
             }
 
             return false; //tiers.SequenceEqual(t);
@@ -72,12 +72,15 @@ namespace CardMonkey.Displays
         /// </summary>
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
+# if DEBUG
+            node.PrintInfo();
             node.SaveMeshTexture();
+#endif
+
             // Always set the MeshTexture to the same one, since all the cross-paths use the same original sprite atlas
             SetMeshTexture(node, nameof(CardMonkeyBaseDisplay));
 
             // Print info about the node in order to edit it easier
-            // node.PrintInfo();
 
             // Make it not hold the Boomerang, name found through the PrintInfo() method above
             node.RemoveBone("SuperMonkeyRig:Dart");

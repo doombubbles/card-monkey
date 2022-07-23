@@ -23,10 +23,5 @@ namespace CardMonkey.Upgrades.TopPath
         {
             tower.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 2, 0, 10, null, false);
         }
-        
-        public override bool RestrictUpgrading(Tower tower)
-        {
-            return tower.towerModel.tier == 1;
-        }
     }
 }

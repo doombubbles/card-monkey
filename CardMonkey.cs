@@ -52,32 +52,11 @@ namespace CardMonkey
         }
 
         /// <summary>
-        /// Support the Ultimate Crosspathing Mod by generating all the Tower Tiers if the mod exists
+        /// Support the Ultimate Crosspathing Mod
         /// <br />
         /// That mod will handle actually allowing the upgrades to happen in the UI
         /// </summary>
-        public override IEnumerable<int[]> TowerTiers()
-        {
-            if (GetMod("UltimateCrosspathing") != null)
-            {
-                for (var top = 0; top <= TopPathUpgrades; top++)
-                {
-                    for (var mid = 0; mid <= MiddlePathUpgrades; mid++)
-                    {
-                        for (var bot = 0; bot <= BottomPathUpgrades; bot++)
-                        {
-                            yield return new[] {top, mid, bot};
-                        }
-                    }
-                }
-            }
-            else
-            {
-                foreach (var towerTier in base.TowerTiers())
-                {
-                    yield return towerTier;
-                }
-            }
-        }
+        public override bool IsValidCrosspath(int[] tiers) =>
+            HasMod("UltimateCrosspathing") ? true : base.IsValidCrosspath(tiers);
     }
 }

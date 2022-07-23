@@ -16,9 +16,11 @@ namespace CardMonkey.Displays.Tier5
 
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
-            //node.SaveMeshTexture(0);
-            //node.SaveMeshTexture(1);
-            // node.PrintInfo();
+# if DEBUG
+            node.SaveMeshTexture(0);
+            node.SaveMeshTexture(1);
+            node.PrintInfo();
+#endif
 
             // Remove the potion in hand
             node.RemoveBone("AlchemistRig:Propjectile_R");

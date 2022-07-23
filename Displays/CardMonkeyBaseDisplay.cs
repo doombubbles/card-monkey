@@ -19,8 +19,10 @@ namespace CardMonkey.Displays
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
             // Print info about the node in order to edit it easier
-            // node.PrintInfo();
-            // node.SaveMeshTexture();
+# if DEBUG
+            node.PrintInfo();
+            node.SaveMeshTexture();
+#endif
 
 
             // Set our custom texture

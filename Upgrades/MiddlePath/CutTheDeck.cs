@@ -30,10 +30,5 @@ namespace CardMonkey.Upgrades.MiddlePath
                 }
             }
         }
-
-        public override bool RestrictUpgrading(Tower tower)
-        {
-            return tower.towerModel.tier == 0;
-        }
     }
 }

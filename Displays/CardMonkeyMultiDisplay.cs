@@ -5,6 +5,7 @@ using Assets.Scripts.Unity.Display;
 using BTD_Mod_Helper.Api;
 using BTD_Mod_Helper.Api.Display;
 using BTD_Mod_Helper.Extensions;
+using UnityEngine;
 
 namespace CardMonkey.Displays
 {
@@ -73,14 +74,18 @@ namespace CardMonkey.Displays
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
 # if DEBUG
+            // Print info about the node in order to edit it easier
             node.PrintInfo();
             node.SaveMeshTexture();
 #endif
 
             // Always set the MeshTexture to the same one, since all the cross-paths use the same original sprite atlas
             SetMeshTexture(node, nameof(CardMonkeyBaseDisplay));
+            
+            node.GetMeshRenderer().SetOutlineColor(new Color(73f / 255, 175f / 255, 52f / 255));
+            
+            SetMeshOutlineColor(node, new Color(73f / 255, 175f / 255, 52f / 255));
 
-            // Print info about the node in order to edit it easier
 
             // Make it not hold the Boomerang, name found through the PrintInfo() method above
             node.RemoveBone("SuperMonkeyRig:Dart");

@@ -2,6 +2,7 @@
 using Assets.Scripts.Unity.Display;
 using BTD_Mod_Helper.Api.Display;
 using BTD_Mod_Helper.Extensions;
+using UnityEngine;
 
 namespace CardMonkey.Displays.Tier5
 {
@@ -27,7 +28,9 @@ namespace CardMonkey.Displays.Tier5
 
             // PrintInfo() showed this has multiple SkinnedMeshRenderers, so have to specify the index
             SetMeshTexture(node, "AceOfSpadesCape", 1);
+            SetMeshOutlineColor(node, new Color(0, 0, 0), 1);
             SetMeshTexture(node, "CardMonkeyBaseDisplay", 2);
+            SetMeshOutlineColor(node, new Color(0, 0, 0), 2);
         }
     }
 }

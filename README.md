@@ -26,17 +26,3 @@ Yet to Come:
 * Flesh out the Display Models for Tier 3-4 crosspaths, and touch up the Tier 1 - 2 crosspaths
 * Make the different Upgrade Portrait artwork
 * More balancing on the costs and strengths of the upgrades
-
-**Changelog**
-
-v0.2.1 Fix textures for BTD6 v29, remove custom tower set example
-
-v0.2.0 Added Paragon and custom Tower Set
-
-v0.1.3 Fixed for Bloons TD6 v28.0
-
-v0.1.2 Support Ultimate Crosspathing
-
-v0.1.1 Fix Display Models
-
-v0.1.0 Pre Release

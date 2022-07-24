@@ -2,10 +2,10 @@
 {
     public static class ModHelperData
     {
-        public const string Version = "0.2.2";
+        public const string Version = "1.2.2";
         public const string Name = "Card Monkey";
         public const string Description =
-            "Custom description instead of repo's description that's so long that you'd be inclined to put it on two separate lines";
+            "Adds in a new custom tower themed around playing cards.";
 
         public const string RepoOwner = "doombubbles";
         public const string RepoName = "card-monkey";

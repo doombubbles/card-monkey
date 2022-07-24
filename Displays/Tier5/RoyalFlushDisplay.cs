@@ -2,6 +2,7 @@
 using Assets.Scripts.Unity.Display;
 using BTD_Mod_Helper.Api.Display;
 using BTD_Mod_Helper.Extensions;
+using UnityEngine;
 
 namespace CardMonkey.Displays.Tier5
 {
@@ -27,7 +28,9 @@ namespace CardMonkey.Displays.Tier5
 
             // PrintInfo() showed this has multiple SkinnedMeshRenderers, so have to specify the index
             SetMeshTexture(node, "RoyalFlushDisplay", 0);
+            SetMeshOutlineColor(node, new Color(73f / 255, 175f / 255, 52f / 255), 0);
             SetMeshTexture(node, "RoyalFlushDisplay", 1);
+            SetMeshOutlineColor(node, new Color(73f / 255, 175f / 255, 52f / 255), 1);
         }
     }
 }

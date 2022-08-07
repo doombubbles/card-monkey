@@ -82,9 +82,9 @@ namespace CardMonkey.Displays.Projectiles
     {
         public override string BaseDisplay => Generic2dDisplay;
 
-        public override float PixelsPerUnit => 5f;
+        public override float Scale => 2f;
 
-        public override Vector3 PositionOffset => new Vector3(0, 5f, 0);
+        public override Vector3 PositionOffset => new(0, 5f, 0);
 
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
@@ -106,9 +106,9 @@ namespace CardMonkey.Displays.Projectiles
     {
         public override string BaseDisplay => Generic2dDisplay;
 
-        public override float PixelsPerUnit => 5f;
+        public override float Scale => 2f;
 
-        public override Vector3 PositionOffset => new Vector3(0, 5f, 0);
+        public override Vector3 PositionOffset => new(0, 5f, 0);
 
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {

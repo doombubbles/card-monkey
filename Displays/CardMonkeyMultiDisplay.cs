@@ -15,7 +15,7 @@ namespace CardMonkey.Displays
     /// </summary>
     public class CardMonkeyMultiDisplay : ModTowerDisplay<CardMonkey>
     {
-        private readonly int[] t; // The tiers used for a particular instance of CardMonkeyBaseDisplay
+        private readonly int[] t = null!; // The tiers used for a particular instance of CardMonkeyBaseDisplay
 
         /// <summary>
         /// All classes that derive from ModContent MUST have a zero argument constructor to work
@@ -81,9 +81,7 @@ namespace CardMonkey.Displays
 
             // Always set the MeshTexture to the same one, since all the cross-paths use the same original sprite atlas
             SetMeshTexture(node, nameof(CardMonkeyBaseDisplay));
-            
-            node.GetMeshRenderer().SetOutlineColor(new Color(73f / 255, 175f / 255, 52f / 255));
-            
+
             SetMeshOutlineColor(node, new Color(73f / 255, 175f / 255, 52f / 255));
 
 

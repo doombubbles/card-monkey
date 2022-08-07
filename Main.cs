@@ -2,7 +2,7 @@
 using CardMonkey;
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(CardMonkeyMod), "Card Monkey", "0.2.1", "doombubbles")]
+[assembly: MelonInfo(typeof(CardMonkeyMod), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 
 namespace CardMonkey

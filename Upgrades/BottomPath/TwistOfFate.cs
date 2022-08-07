@@ -2,6 +2,7 @@
 using Assets.Scripts.Models.Towers.Filters;
 using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
 using Assets.Scripts.Unity;
+using Assets.Scripts.Utils;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 using CardMonkey.Displays.Projectiles;
@@ -82,7 +83,7 @@ namespace CardMonkey.Upgrades.BottomPath
                 sound.sound1, sound.sound2, sound.sound3, sound.sound4, sound.sound5);
             redCard.projectile.AddBehavior(soundBehavior);
 
-            var eB = new CreateEffectOnExhaustedModel("CreateEffectOnExhaustedModel_", "", 0f, false,
+            var eB = new CreateEffectOnExhaustedModel("CreateEffectOnExhaustedModel_", new PrefabReference(), 0f, false,
                 false, effect.effectModel);
             redCard.projectile.AddBehavior(eB);
             redCard.Rate *= 0.8f;

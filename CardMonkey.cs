@@ -2,6 +2,7 @@
 using System.Linq;
 using Assets.Scripts.Models.Towers;
 using Assets.Scripts.Models.TowerSets;
+using BTD_Mod_Helper.Api.Enums;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 using CardMonkey.Displays.Projectiles;
@@ -16,7 +17,7 @@ namespace CardMonkey
         // public override string Portrait => "Don't need to override this, using the default of Name-Portrait";
         // public override string Icon => "Don't need to override this, using the default of Name-Icon";
 
-        public override string TowerSet => PRIMARY;
+        public override string TowerSet => TowerSetType.Primary;
 
         public override string BaseTower => TowerType.DartMonkey;
         public override int Cost => 400;

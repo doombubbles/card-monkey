@@ -32,6 +32,8 @@
 
 .idea/
 obj/
+bin/
+.vs/
 *.xml
 bin/
 .vs/

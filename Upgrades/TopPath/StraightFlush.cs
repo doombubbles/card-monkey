@@ -25,8 +25,8 @@ namespace CardMonkey.Upgrades.TopPath
                 {
                     new ThrowMarkerOffsetModel("ThrowMarkerOffsetModel_", -4, 0, 0, 0)
                 }, 1, false, null, 0);
-                
-                
+
+
                 for (var i = 1; i <= 4; i++)
                 {
                     var newWeapon = weaponModel.Duplicate();

@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Models.Towers;
+using Assets.Scripts.Simulation.Towers;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 
@@ -9,7 +10,7 @@ namespace CardMonkey.Upgrades.MiddlePath
         public override int Path => MIDDLE;
         public override int Tier => 1;
         public override int Cost => 400;
-        
+
         public override string DisplayName => "Cut the Deck";
         public override string Description => "Cards have increased pierce";
 

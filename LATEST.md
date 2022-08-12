@@ -1,0 +1,2 @@
+- Fixed for v32.0
+- New portraits

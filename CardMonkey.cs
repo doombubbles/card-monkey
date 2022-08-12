@@ -2,11 +2,10 @@
 using System.Linq;
 using Assets.Scripts.Models.Towers;
 using Assets.Scripts.Models.TowerSets;
-using BTD_Mod_Helper;
+using BTD_Mod_Helper.Api.Enums;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 using CardMonkey.Displays.Projectiles;
-using MelonLoader;
 
 namespace CardMonkey
 {
@@ -18,8 +17,8 @@ namespace CardMonkey
         // public override string Portrait => "Don't need to override this, using the default of Name-Portrait";
         // public override string Icon => "Don't need to override this, using the default of Name-Icon";
 
-        public override string TowerSet => PRIMARY;
-        
+        public override string TowerSet => TowerSetType.Primary;
+
         public override string BaseTower => TowerType.DartMonkey;
         public override int Cost => 400;
 
@@ -45,41 +44,20 @@ namespace CardMonkey
 
         /// <summary>
         /// Make Card Monkey go right after the Boomerang Monkey in the shop
-        /// <br/>
+        /// <br />
         /// If we didn't have this, it would just put it at the end of the Primary section
         /// </summary>
-        /*
         public override int GetTowerIndex(List<TowerDetailsModel> towerSet)
         {
             return towerSet.First(model => model.towerId == TowerType.BoomerangMonkey).towerIndex + 1;
-        }*/
+        }
 
         /// <summary>
-        /// Support the Ultimate Crosspathing Mod by generating all the Tower Tiers if the mod exists
-        /// <br/>
+        /// Support the Ultimate Crosspathing Mod
+        /// <br />
         /// That mod will handle actually allowing the upgrades to happen in the UI
         /// </summary>
-        public override IEnumerable<int[]> TowerTiers()
-        {
-            if (MelonHandler.Mods.OfType<BloonsTD6Mod>().Any(m => m.GetModName() == "UltimateCrosspathing"))
-            {
-                for (var top = 0; top <= TopPathUpgrades; top++)
-                {
-                    for (var mid = 0; mid <= MiddlePathUpgrades; mid++)
-                    {
-                        for (var bot = 0; bot <= BottomPathUpgrades; bot++)
-                        {
-                            yield return new[] { top, mid, bot };
-                        }
-                    }
-                }
-            } else
-            {
-                foreach (var towerTier in base.TowerTiers())
-                {
-                    yield return towerTier;
-                }
-            }
-        }
+        public override bool IsValidCrosspath(int[] tiers) =>
+            HasMod("UltimateCrosspathing") ? true : base.IsValidCrosspath(tiers);
     }
 }

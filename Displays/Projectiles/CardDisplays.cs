@@ -17,7 +17,7 @@ namespace CardMonkey.Displays.Projectiles
             Set2DTexture(node, Name);
         }
     }
-    
+
     public class BlueCardDisplay : ModDisplay
     {
         public override string BaseDisplay => Generic2dDisplay;
@@ -27,7 +27,7 @@ namespace CardMonkey.Displays.Projectiles
             Set2DTexture(node, Name);
         }
     }
-    
+
     public class GoldCardDisplay : ModDisplay
     {
         public override string BaseDisplay => Generic2dDisplay;
@@ -37,7 +37,7 @@ namespace CardMonkey.Displays.Projectiles
             Set2DTexture(node, Name);
         }
     }
-    
+
     public class RedWildCardDisplay : ModDisplay
     {
         public override string BaseDisplay => Generic2dDisplay;
@@ -47,7 +47,7 @@ namespace CardMonkey.Displays.Projectiles
             Set2DTexture(node, Name);
         }
     }
-    
+
     public class GoldWildCardDisplay : ModDisplay
     {
         public override string BaseDisplay => Generic2dDisplay;
@@ -57,7 +57,7 @@ namespace CardMonkey.Displays.Projectiles
             Set2DTexture(node, Name);
         }
     }
-    
+
     public class BlueWildCardDisplay : ModDisplay
     {
         public override string BaseDisplay => Generic2dDisplay;
@@ -67,7 +67,7 @@ namespace CardMonkey.Displays.Projectiles
             Set2DTexture(node, Name);
         }
     }
-    
+
     public class WildAceCardDisplay : ModDisplay
     {
         public override string BaseDisplay => Generic2dDisplay;
@@ -77,21 +77,21 @@ namespace CardMonkey.Displays.Projectiles
             Set2DTexture(node, Name);
         }
     }
-    
+
     public class AceInTheHoleAbilityDisplay : ModDisplay
     {
         public override string BaseDisplay => Generic2dDisplay;
 
-        public override float PixelsPerUnit => 5f;
-        
-        public override Vector3 PositionOffset => new Vector3(0, 5f, 0);
+        public override float Scale => 2f;
+
+        public override Vector3 PositionOffset => new(0, 5f, 0);
 
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
             Set2DTexture(node, nameof(WildAceCardDisplay));
         }
     }
-    
+
     public class AceOfSpadesCardDisplay : ModDisplay
     {
         public override string BaseDisplay => Generic2dDisplay;
@@ -101,14 +101,14 @@ namespace CardMonkey.Displays.Projectiles
             Set2DTexture(node, Name);
         }
     }
-    
+
     public class AceOfSpadesAbilityDisplay : ModDisplay
     {
         public override string BaseDisplay => Generic2dDisplay;
 
-        public override float PixelsPerUnit => 5f;
+        public override float Scale => 2f;
 
-        public override Vector3 PositionOffset => new Vector3(0, 5f, 0);
+        public override Vector3 PositionOffset => new(0, 5f, 0);
 
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {

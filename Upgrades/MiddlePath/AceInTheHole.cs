@@ -4,17 +4,12 @@ using Assets.Scripts.Models.Towers.Behaviors.Abilities;
 using Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors;
 using Assets.Scripts.Models.Towers.Behaviors.Attack;
 using Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Emissions;
 using Assets.Scripts.Models.Towers.Behaviors.Emissions.Behaviors;
-using Assets.Scripts.Models.Towers.Filters;
 using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
 using Assets.Scripts.Unity;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
-using CardMonkey.Displays;
 using CardMonkey.Displays.Projectiles;
-using CardMonkey.Upgrades.BottomPath;
-using MelonLoader;
 using UnhollowerBaseLib;
 
 namespace CardMonkey.Upgrades.MiddlePath
@@ -63,10 +58,11 @@ namespace CardMonkey.Upgrades.MiddlePath
 
 
             var weapon = attackModel.weapons[0];
-            weapon.emission.AddBehavior(new EmissionRotationOffBloonDirectionModel("EmissionRotationOffBloonDirectionModel", false, false));
-            
+            weapon.emission.AddBehavior(
+                new EmissionRotationOffBloonDirectionModel("EmissionRotationOffBloonDirectionModel", false, false));
+
             var projectileModel = weapon.projectile;
-            
+
             projectileModel.ApplyDisplay<AceInTheHoleAbilityDisplay>();
             projectileModel.pierce = 1000;
             projectileModel.RemoveBehavior<RotateModel>();
@@ -75,7 +71,8 @@ namespace CardMonkey.Upgrades.MiddlePath
             projectileModel.GetDamageModel().immuneBloonProperties = BloonProperties.None;
             projectileModel.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Ceramic", "Ceramic",
                 1, 30, false, false));
-            projectileModel.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Fortified", "Fortified",
+            projectileModel.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Fortified",
+                "Fortified",
                 1, 30, false, false));
             projectileModel.GetBehavior<TravelStraitModel>().Speed = 500f;
             projectileModel.GetBehavior<TravelStraitModel>().Lifespan = 5.0f;

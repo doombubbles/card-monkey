@@ -9,11 +9,11 @@ namespace CardMonkey.Upgrades.BottomPath
         public override int Path => BOTTOM;
         public override int Tier => 1;
         public override int Cost => 300;
-        
+
         public override string Description => "Throws cards faster";
 
         public override string Portrait => "CardMonkey-Portrait";
-        
+
         public override void ApplyUpgrade(TowerModel tower)
         {
             foreach (var weaponModel in tower.GetWeapons())

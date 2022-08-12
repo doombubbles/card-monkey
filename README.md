@@ -1,37 +1,32 @@
-<a href="https://github.com/doombubbles/card-monkey/raw/main/CardMonkey.dll"><img align="right" alt="Download" height="75" src="https://github.com/doombubbles/BTD6-Mods/blob/main/download.png?raw=true"></a>
+<a href="https://github.com/doombubbles/card-monkey/releases/latest/download/CardMonkey.dll">
+    <img align="left" alt="Icon" height="90" src="CardMonkey-Icon.png">
+    <img align="right" alt="Download" height="75" src="https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/BloonsTD6%20Mod%20Helper/Resources/DownloadBtn.png">
+</a>
 
-# Card Monkey
+<h1 align="center">Card Monkey</h1>
+
+### A somewhat serious, somewhat example mod for creating a fully featured (15 upgrades, all crosspaths, custom displays) tower using BTD Mod Helper.
 
 <p float="left">
-    <img alt="Card Monkey" width="300" height="300" src="https://github.com/doombubbles/card-monkey/blob/main/CardMonkey-Icon.png?raw=true"/>
-    <img alt="Card Monkey Paragon" width="300" height="300" src="https://github.com/doombubbles/card-monkey/blob/main/Upgrades/GodKingOfSpades-Portrait.png?raw=true"/>
+    <img alt="Card Monkey" width="300" height="300" src="CardMonkey-Icon.png"/>
+    <img alt="Card Monkey Paragon" width="300" height="300" src="Upgrades/GodKingOfSpades-Portrait.png"/>
 </p>
 
-This is the Pre-Release of the Card Monkey mod, meant to serve also as an example and template for creating a fully featured (15 upgrades, all crosspaths, custom displays) tower using BTD Mod Helper.
 
-It is currently in a very playable state, and the actual coding aspect is basically finished.
+
+
 
 Completed:
+
 * All 15 Upgrade Implementations (+ Crosspathing)
 * All Upgrade Icons
 * Some Portrait textures
 * Some custom/modified Display Models
 
 Yet to Come:
+
 * Flesh out the Display Models for Tier 3-4 crosspaths, and touch up the Tier 1 - 2 crosspaths
 * Make the different Upgrade Portrait artwork
 * More balancing on the costs and strengths of the upgrades
 
-**Changelog**
-
-v0.2.1 Fix textures for BTD6 v29, remove custom tower set example
-
-v0.2.0 Added Paragon and custom Tower Set
-
-v0.1.3 Fixed for Bloons TD6 v28.0
-
-v0.1.2 Support Ultimate Crosspathing
-
-v0.1.1 Fix Display Models
-
-v0.1.0 Pre Release
+[![Requires BTD6 Mod Helper](https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/banner.png)](https://github.com/gurrenm3/BTD-Mod-Helper#readme)

@@ -1,8 +1,5 @@
 ﻿using Assets.Scripts.Models.Towers;
-using Assets.Scripts.Models.Towers.Behaviors;
-using Assets.Scripts.Simulation.Towers;
 using BTD_Mod_Helper.Api.Towers;
-using MelonLoader;
 
 namespace CardMonkey.Upgrades
 {

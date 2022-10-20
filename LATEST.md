@@ -1,2 +1,1 @@
-- Fixed for v32.0
-- New portraits
+- Fixed displays for v33

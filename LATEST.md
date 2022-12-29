@@ -1,1 +1,1 @@
-- Fixed displays for v33
+- Fixed for BTD6 v34 / MelonLoader 0.6.0

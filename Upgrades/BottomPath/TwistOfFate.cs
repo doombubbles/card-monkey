@@ -1,8 +1,8 @@
-﻿using Assets.Scripts.Models.Towers;
-using Assets.Scripts.Models.Towers.Filters;
-using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
-using Assets.Scripts.Unity;
-using Assets.Scripts.Utils;
+﻿using Il2CppAssets.Scripts.Models.Towers;
+using Il2CppAssets.Scripts.Models.Towers.Filters;
+using Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors;
+using Il2CppAssets.Scripts.Unity;
+using Il2CppAssets.Scripts.Utils;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 using CardMonkey.Displays.Projectiles;
@@ -75,7 +75,7 @@ namespace CardMonkey.Upgrades.BottomPath
 
             var behavior = new CreateProjectileOnExhaustFractionModel(
                 "CreateProjectileOnExhaustFractionModel_",
-                pb.projectile, pb.emission, 1f, 1f, true);
+                pb.projectile, pb.emission, 1f, 1f, true, false);
             redCard.projectile.AddBehavior(behavior);
 
             var soundBehavior = new CreateSoundOnProjectileExhaustModel(

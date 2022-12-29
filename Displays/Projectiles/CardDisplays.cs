@@ -1,5 +1,5 @@
-﻿using Assets.Scripts.Simulation.SMath;
-using Assets.Scripts.Unity.Display;
+﻿using Il2CppAssets.Scripts.Simulation.SMath;
+using Il2CppAssets.Scripts.Unity.Display;
 using BTD_Mod_Helper.Api.Display;
 
 namespace CardMonkey.Displays.Projectiles

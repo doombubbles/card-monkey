@@ -1,6 +1,6 @@
-﻿using Assets.Scripts.Models.Towers;
-using Assets.Scripts.Models.Towers.Behaviors.Emissions;
-using Assets.Scripts.Models.Towers.Weapons.Behaviors;
+﻿using Il2CppAssets.Scripts.Models.Towers;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions;
+using Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 

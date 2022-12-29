@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Assets.Scripts.Models.Towers;
-using Assets.Scripts.Models.TowerSets;
+using BTD_Mod_Helper;
+using Il2CppAssets.Scripts.Models.Towers;
+using Il2CppAssets.Scripts.Models.TowerSets;
 using BTD_Mod_Helper.Api.Enums;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
@@ -17,7 +18,7 @@ namespace CardMonkey
         // public override string Portrait => "Don't need to override this, using the default of Name-Portrait";
         // public override string Icon => "Don't need to override this, using the default of Name-Icon";
 
-        public override string TowerSet => TowerSetType.Primary;
+        public override TowerSet TowerSet => TowerSet.Primary;
 
         public override string BaseTower => TowerType.DartMonkey;
         public override int Cost => 400;
@@ -58,6 +59,6 @@ namespace CardMonkey
         /// That mod will handle actually allowing the upgrades to happen in the UI
         /// </summary>
         public override bool IsValidCrosspath(int[] tiers) =>
-            HasMod("UltimateCrosspathing") ? true : base.IsValidCrosspath(tiers);
+            ModHelper.HasMod("UltimateCrosspathing") ? true : base.IsValidCrosspath(tiers);
     }
 }

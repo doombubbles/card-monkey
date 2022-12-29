@@ -1,7 +1,8 @@
-﻿using Assets.Scripts.Models.Towers;
+﻿using Il2CppAssets.Scripts.Models.Towers;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 using CardMonkey.Displays.Projectiles;
+using Il2Cpp;
 
 namespace CardMonkey.Upgrades.MiddlePath
 {

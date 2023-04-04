@@ -59,6 +59,6 @@ namespace CardMonkey
         /// That mod will handle actually allowing the upgrades to happen in the UI
         /// </summary>
         public override bool IsValidCrosspath(int[] tiers) =>
-            ModHelper.HasMod("UltimateCrosspathing") ? true : base.IsValidCrosspath(tiers);
+            ModHelper.HasMod("UltimateCrosspathing") || base.IsValidCrosspath(tiers);
     }
 }

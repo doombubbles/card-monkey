@@ -1,1 +1,1 @@
-- Fixed for BTD6 v34 / MelonLoader 0.6.0
+- Updated textures for BTD6 v36.0

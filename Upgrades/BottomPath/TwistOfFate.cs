@@ -7,6 +7,7 @@ using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 using CardMonkey.Displays.Projectiles;
 using CardMonkey.Upgrades.MiddlePath;
+using Il2CppAssets.Scripts.Models.Effects;
 
 namespace CardMonkey.Upgrades.BottomPath
 {
@@ -75,7 +76,7 @@ namespace CardMonkey.Upgrades.BottomPath
 
             var behavior = new CreateProjectileOnExhaustFractionModel(
                 "CreateProjectileOnExhaustFractionModel_",
-                pb.projectile, pb.emission, 1f, 1f, true, false);
+                pb.projectile, pb.emission, 1f, 1f, true, false, false);
             redCard.projectile.AddBehavior(behavior);
 
             var soundBehavior = new CreateSoundOnProjectileExhaustModel(
@@ -83,7 +84,7 @@ namespace CardMonkey.Upgrades.BottomPath
                 sound.sound1, sound.sound2, sound.sound3, sound.sound4, sound.sound5);
             redCard.projectile.AddBehavior(soundBehavior);
 
-            var eB = new CreateEffectOnExhaustedModel("CreateEffectOnExhaustedModel_", new PrefabReference(), 0f, false,
+            var eB = new CreateEffectOnExhaustedModel("CreateEffectOnExhaustedModel_", new PrefabReference(), 0f, Fullscreen.No,
                 false, effect.effectModel);
             redCard.projectile.AddBehavior(eB);
             redCard.Rate *= 0.8f;

@@ -29,7 +29,7 @@ namespace CardMonkey.Displays.Tier5
             // PrintInfo() showed this has multiple SkinnedMeshRenderers, so have to specify the index
             SetMeshTexture(node, "AceOfSpadesCape", 1);
             SetMeshOutlineColor(node, new Color(0, 0, 0), 1);
-            SetMeshTexture(node, "CardMonkeyBaseDisplay", 2);
+            SetMeshTexture(node, "AceOfSpadesDisplay", 2);
             SetMeshOutlineColor(node, new Color(0, 0, 0), 2);
         }
     }

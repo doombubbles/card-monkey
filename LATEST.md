@@ -1,1 +1,1 @@
-- Updated textures for BTD6 v36.0
+- Updated for BTD6 v37.0

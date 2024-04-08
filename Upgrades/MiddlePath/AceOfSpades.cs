@@ -55,6 +55,7 @@ namespace CardMonkey.Upgrades.MiddlePath
 
             projectileModel.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Moabs", "Moabs",
                 1, 2000, false, false));
+            projectileModel.hasDamageModifiers = true;
         }
     }
 }

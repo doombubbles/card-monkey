@@ -30,6 +30,7 @@ namespace CardMonkey.Upgrades.MiddlePath
                 projectile.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Fortified", "Fortified",
                     1, 3, false, false));
                 projectile.ApplyDisplay<WildAceCardDisplay>();
+                projectile.hasDamageModifiers = true;
             }
         }
     }

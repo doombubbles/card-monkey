@@ -3,7 +3,7 @@ using System.Linq;
 using BTD_Mod_Helper;
 using Il2CppAssets.Scripts.Models.Towers;
 using Il2CppAssets.Scripts.Models.TowerSets;
-using BTD_Mod_Helper.Api.Enums;
+using BTD_Mod_Helper.Api.ModOptions;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 using CardMonkey.Displays.Projectiles;
@@ -23,14 +23,13 @@ namespace CardMonkey
         public override string BaseTower => TowerType.DartMonkey;
         public override int Cost => 400;
 
-        public override int TopPathUpgrades => 5;
-        public override int MiddlePathUpgrades => 5;
-        public override int BottomPathUpgrades => 5;
         public override string Description => "Throws playing cards at Bloons";
 
         // public override string DisplayName => "Don't need to override this, the default turns it into 'Card Monkey'"
 
         public override ParagonMode ParagonMode => ParagonMode.Base555;
+
+        public override ModSettingHotkey Hotkey => CardMonkeyMod.CardMonkeyHotkey;
 
         public override void ModifyBaseTowerModel(TowerModel towerModel)
         {

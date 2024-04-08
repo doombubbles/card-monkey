@@ -77,6 +77,7 @@ namespace CardMonkey.Upgrades.MiddlePath
                 1, 30, false, false));
             projectileModel.GetBehavior<TravelStraitModel>().Speed = 500f;
             projectileModel.GetBehavior<TravelStraitModel>().Lifespan = 5.0f;
+            projectileModel.hasDamageModifiers = true;
         }
     }
 }

@@ -2,12 +2,12 @@
 using Il2CppAssets.Scripts.Models.Towers.Filters;
 using Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors;
 using Il2CppAssets.Scripts.Unity;
-using Il2CppAssets.Scripts.Utils;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 using CardMonkey.Displays.Projectiles;
 using CardMonkey.Upgrades.MiddlePath;
 using Il2CppAssets.Scripts.Models.Effects;
+using Il2CppNinjaKiwi.Common.ResourceUtils;
 
 namespace CardMonkey.Upgrades.BottomPath
 {
@@ -36,7 +36,7 @@ namespace CardMonkey.Upgrades.BottomPath
                 r2gAlch.GetAttackModels()[1].GetDescendant<IncreaseBloonWorthModel>().Duplicate();
             var filterOutTagModel = r2gAlch.GetDescendant<FilterOutTagModel>().Duplicate();
             increaseBloonWorthModel.filter = filterOutTagModel;
-            goldCard.projectile.collisionPasses = new[] {-1, 0};
+            goldCard.projectile.collisionPasses = new[] { -1, 0 };
             goldCard.projectile.AddBehavior(increaseBloonWorthModel);
             if (tower.appliedUpgrades.Contains(UpgradeID<WildCards>()))
             {
@@ -54,7 +54,7 @@ namespace CardMonkey.Upgrades.BottomPath
             var bloonImpact = Game.instance.model.GetTower(TowerType.BombShooter, 4);
             var slowModel = bloonImpact.GetDescendant<SlowModel>().Duplicate();
             var slowModifierForTagModel = bloonImpact.GetDescendant<SlowModifierForTagModel>().Duplicate();
-            blueCard.projectile.collisionPasses = new[] {-1, 0};
+            blueCard.projectile.collisionPasses = new[] { -1, 0 };
             blueCard.projectile.AddBehavior(slowModel);
             blueCard.projectile.AddBehavior(slowModifierForTagModel);
             if (tower.appliedUpgrades.Contains(UpgradeID<WildCards>()))
@@ -84,7 +84,8 @@ namespace CardMonkey.Upgrades.BottomPath
                 sound.sound1, sound.sound2, sound.sound3, sound.sound4, sound.sound5);
             redCard.projectile.AddBehavior(soundBehavior);
 
-            var eB = new CreateEffectOnExhaustedModel("CreateEffectOnExhaustedModel_", new PrefabReference(), 0f, Fullscreen.No,
+            var eB = new CreateEffectOnExhaustedModel("CreateEffectOnExhaustedModel_", new PrefabReference(), 0f,
+                Fullscreen.No,
                 false, effect.effectModel);
             redCard.projectile.AddBehavior(eB);
             redCard.Rate *= 0.8f;

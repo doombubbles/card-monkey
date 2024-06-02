@@ -13,21 +13,9 @@ Card Monkey
     <img alt="Card Monkey Paragon" width="300" height="300" src="Upgrades/GodKingOfSpades-Portrait.png"/>
 </p>
 
-
-
-
-
-Completed:
-
 * All 15 Upgrade Implementations (+ Crosspathing)
 * All Upgrade Icons
 * Some Portrait textures
 * Some custom/modified Display Models
-
-Yet to Come:
-
-* Flesh out the Display Models for Tier 3-4 crosspaths, and touch up the Tier 1 - 2 crosspaths
-* Make the different Upgrade Portrait artwork
-* More balancing on the costs and strengths of the upgrades
 
 [![Requires BTD6 Mod Helper](https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/banner.png)](https://github.com/gurrenm3/BTD-Mod-Helper#readme)

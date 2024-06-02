@@ -1,9 +1,10 @@
+<h1 align="center">
 <a href="https://github.com/doombubbles/card-monkey/releases/latest/download/CardMonkey.dll">
     <img align="left" alt="Icon" height="90" src="CardMonkey-Icon.png">
     <img align="right" alt="Download" height="75" src="https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/BloonsTD6%20Mod%20Helper/Resources/DownloadBtn.png">
 </a>
-
-<h1 align="center">Card Monkey</h1>
+Card Monkey
+</h1>
 
 ### A somewhat serious, somewhat example mod for creating a fully featured (15 upgrades, all crosspaths, custom displays) tower using BTD Mod Helper.
 

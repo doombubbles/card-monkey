@@ -1,1 +1,1 @@
-- Fixed obscure crash with Ultimate Crosspathing
+- Fixed displays for BTD6 v44

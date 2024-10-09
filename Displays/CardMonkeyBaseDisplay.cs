@@ -26,8 +26,10 @@ namespace CardMonkey.Displays
 #endif
 
             // Set our custom texture
-            SetMeshTexture(node, Name);
+            // SetMeshTexture(node, Name);
             SetMeshOutlineColor(node, new Color(73f / 255, 175f / 255, 52f / 255));
+
+            node.GetRenderer("FlatSkin").AdjustHSV(56, .3f, .9f, new Color(255 / 255f, 244 / 255f, 0 / 255f), .4f);
 
             // Make it not hold the Boomerang
             node.RemoveBone("SuperMonkeyRig:Dart");

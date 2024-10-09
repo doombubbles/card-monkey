@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using BTD_Mod_Helper.Api.Enums;
 using Il2CppAssets.Scripts.Models.Towers;
 using Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors;
 using BTD_Mod_Helper.Api.Towers;
@@ -25,10 +26,8 @@ namespace CardMonkey.Upgrades.MiddlePath
             foreach (var projectile in tower.GetWeapons().Select(weaponModel => weaponModel.projectile))
             {
                 projectile.GetDamageModel().damage++;
-                projectile.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Ceramic", "Ceramic",
-                    1, 3, false, false));
-                projectile.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Fortified", "Fortified",
-                    1, 3, false, false));
+                projectile.AddBehavior(new DamageModifierForTagModel("", "Ceramic", 1, 3, false, false));
+                projectile.AddBehavior(new DamageModifierForTagModel("", "Fortified", 1, 3, false, false));
                 projectile.ApplyDisplay<WildAceCardDisplay>();
                 projectile.hasDamageModifiers = true;
             }

@@ -26,9 +26,8 @@ namespace CardMonkey.Displays
 
         public override float Scale => .75f + ParagonDisplayIndex * .025f;
 
-        public override string BaseDisplay =>
-            Game.instance.model.GetTower(TowerType.SuperMonkey, 5).GetAttackModel().GetBehavior<DisplayModel>().display
-                .GUID;
+        public override string BaseDisplay => Game.instance.model.GetTower(TowerType.SuperMonkey, 5).GetAttackModel()
+            .GetBehavior<DisplayModel>().display.AssetGUID;
 
         public override int ParagonDisplayIndex { get; }
 

@@ -1,1 +1,1 @@
-- Fixed displays for BTD6 v44
+- Fixed for BTD6 v45

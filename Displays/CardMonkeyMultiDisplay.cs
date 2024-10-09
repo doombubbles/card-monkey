@@ -80,7 +80,9 @@ namespace CardMonkey.Displays
 #endif
 
             // Always set the MeshTexture to the same one, since all the cross-paths use the same original sprite atlas
-            SetMeshTexture(node, nameof(CardMonkeyBaseDisplay));
+            // SetMeshTexture(node, nameof(CardMonkeyBaseDisplay));
+            
+            node.GetRenderer("FlatSkin").AdjustHSV(56, .3f, .9f, new Color(255 / 255f, 244 / 255f, 0 / 255f), .4f);
 
             SetMeshOutlineColor(node, new Color(73f / 255, 175f / 255, 52f / 255));
 

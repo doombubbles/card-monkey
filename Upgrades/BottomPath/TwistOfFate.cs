@@ -9,85 +9,84 @@ using CardMonkey.Upgrades.MiddlePath;
 using Il2CppAssets.Scripts.Models.Effects;
 using Il2CppNinjaKiwi.Common.ResourceUtils;
 
-namespace CardMonkey.Upgrades.BottomPath
+namespace CardMonkey.Upgrades.BottomPath;
+
+public class TwistOfFate : ModUpgrade<CardMonkey>
 {
-    public class TwistOfFate : ModUpgrade<CardMonkey>
+    public override int Path => BOTTOM;
+    public override int Tier => 5;
+    public override int Cost => 50000;
+
+    public override string DisplayName => "Twist of Fate";
+    public override string Description => "Cards can explode, stun Bloons, and make Bloons give extra money.";
+
+    public override string Portrait => "CardMonkey-Portrait";
+
+    public override void ApplyUpgrade(TowerModel tower)
     {
-        public override int Path => BOTTOM;
-        public override int Tier => 5;
-        public override int Cost => 50000;
+        tower.range += 10;
+        tower.GetAttackModel().range += 10;
 
-        public override string DisplayName => "Twist of Fate";
-        public override string Description => "Cards can explode, stun Bloons, and make Bloons give extra money.";
+        var redCard = tower.GetWeapon();
 
-        public override string Portrait => "CardMonkey-Portrait";
-
-        public override void ApplyUpgrade(TowerModel tower)
+        var goldCard = redCard.Duplicate();
+        goldCard.name = "WeaponModel_GoldCard";
+        var r2gAlch = Game.instance.model.GetTower(TowerType.Alchemist, 0, 0, 4);
+        var increaseBloonWorthModel =
+            r2gAlch.GetAttackModels()[1].GetDescendant<IncreaseBloonWorthModel>().Duplicate();
+        var filterOutTagModel = r2gAlch.GetDescendant<FilterOutTagModel>().Duplicate();
+        increaseBloonWorthModel.filter = filterOutTagModel;
+        goldCard.projectile.collisionPasses = new[] { -1, 0 };
+        goldCard.projectile.AddBehavior(increaseBloonWorthModel);
+        if (tower.appliedUpgrades.Contains(UpgradeID<WildCards>()))
         {
-            tower.range += 10;
-            tower.GetAttackModel().range += 10;
-
-            var redCard = tower.GetWeapon();
-
-            var goldCard = redCard.Duplicate();
-            goldCard.name = "WeaponModel_GoldCard";
-            var r2gAlch = Game.instance.model.GetTower(TowerType.Alchemist, 0, 0, 4);
-            var increaseBloonWorthModel =
-                r2gAlch.GetAttackModels()[1].GetDescendant<IncreaseBloonWorthModel>().Duplicate();
-            var filterOutTagModel = r2gAlch.GetDescendant<FilterOutTagModel>().Duplicate();
-            increaseBloonWorthModel.filter = filterOutTagModel;
-            goldCard.projectile.collisionPasses = new[] { -1, 0 };
-            goldCard.projectile.AddBehavior(increaseBloonWorthModel);
-            if (tower.appliedUpgrades.Contains(UpgradeID<WildCards>()))
-            {
-                goldCard.projectile.ApplyDisplay<GoldWildCardDisplay>();
-            }
-            else
-            {
-                goldCard.projectile.ApplyDisplay<GoldCardDisplay>();
-            }
-
-            tower.GetAttackModel().AddWeapon(goldCard);
-
-            var blueCard = redCard.Duplicate();
-            blueCard.name = "WeaponModel_Blue_card";
-            var bloonImpact = Game.instance.model.GetTower(TowerType.BombShooter, 4);
-            var slowModel = bloonImpact.GetDescendant<SlowModel>().Duplicate();
-            var slowModifierForTagModel = bloonImpact.GetDescendant<SlowModifierForTagModel>().Duplicate();
-            blueCard.projectile.collisionPasses = new[] { -1, 0 };
-            blueCard.projectile.AddBehavior(slowModel);
-            blueCard.projectile.AddBehavior(slowModifierForTagModel);
-            if (tower.appliedUpgrades.Contains(UpgradeID<WildCards>()))
-            {
-                blueCard.projectile.ApplyDisplay<BlueWildCardDisplay>();
-            }
-            else
-            {
-                blueCard.projectile.ApplyDisplay<BlueCardDisplay>();
-            }
-
-            blueCard.Rate *= 1.2f;
-            tower.GetAttackModel().AddWeapon(blueCard);
-
-            var bomb = Game.instance.model.GetTower(TowerType.BombShooter, 3).GetWeapon().projectile.Duplicate();
-            var pb = bomb.GetBehavior<CreateProjectileOnContactModel>();
-            var sound = bomb.GetBehavior<CreateSoundOnProjectileCollisionModel>();
-            var effect = bomb.GetBehavior<CreateEffectOnContactModel>();
-
-            var behavior = new CreateProjectileOnExhaustFractionModel(
-                "CreateProjectileOnExhaustFractionModel_",
-                pb.projectile, pb.emission, 1f, 1f, true, false, false);
-            redCard.projectile.AddBehavior(behavior);
-
-            var soundBehavior = new CreateSoundOnProjectileExhaustModel(
-                "CreateSoundOnProjectileExhaustModel_",
-                sound.sound1, sound.sound2, sound.sound3, sound.sound4, sound.sound5);
-            redCard.projectile.AddBehavior(soundBehavior);
-
-            var eB = new CreateEffectOnExhaustedModel("CreateEffectOnExhaustedModel_", new PrefabReference(""), 0f,
-                Fullscreen.No, false, effect.effectModel);
-            redCard.projectile.AddBehavior(eB);
-            redCard.Rate *= 0.8f;
+            goldCard.projectile.ApplyDisplay<GoldWildCardDisplay>();
         }
+        else
+        {
+            goldCard.projectile.ApplyDisplay<GoldCardDisplay>();
+        }
+
+        tower.GetAttackModel().AddWeapon(goldCard);
+
+        var blueCard = redCard.Duplicate();
+        blueCard.name = "WeaponModel_Blue_card";
+        var bloonImpact = Game.instance.model.GetTower(TowerType.BombShooter, 4);
+        var slowModel = bloonImpact.GetDescendant<SlowModel>().Duplicate();
+        var slowModifierForTagModel = bloonImpact.GetDescendant<SlowModifierForTagModel>().Duplicate();
+        blueCard.projectile.collisionPasses = new[] { -1, 0 };
+        blueCard.projectile.AddBehavior(slowModel);
+        blueCard.projectile.AddBehavior(slowModifierForTagModel);
+        if (tower.appliedUpgrades.Contains(UpgradeID<WildCards>()))
+        {
+            blueCard.projectile.ApplyDisplay<BlueWildCardDisplay>();
+        }
+        else
+        {
+            blueCard.projectile.ApplyDisplay<BlueCardDisplay>();
+        }
+
+        blueCard.Rate *= 1.2f;
+        tower.GetAttackModel().AddWeapon(blueCard);
+
+        var bomb = Game.instance.model.GetTower(TowerType.BombShooter, 3).GetWeapon().projectile.Duplicate();
+        var pb = bomb.GetBehavior<CreateProjectileOnContactModel>();
+        var sound = bomb.GetBehavior<CreateSoundOnProjectileCollisionModel>();
+        var effect = bomb.GetBehavior<CreateEffectOnContactModel>();
+
+        var behavior = new CreateProjectileOnExhaustFractionModel(
+            "CreateProjectileOnExhaustFractionModel_",
+            pb.projectile, pb.emission, 1f, 1f, true, false, false);
+        redCard.projectile.AddBehavior(behavior);
+
+        var soundBehavior = new CreateSoundOnProjectileExhaustModel(
+            "CreateSoundOnProjectileExhaustModel_",
+            sound.sound1, sound.sound2, sound.sound3, sound.sound4, sound.sound5);
+        redCard.projectile.AddBehavior(soundBehavior);
+
+        var eB = new CreateEffectOnExhaustedModel("CreateEffectOnExhaustedModel_", new PrefabReference(""), 0f,
+            Fullscreen.No, false, effect.effectModel);
+        redCard.projectile.AddBehavior(eB);
+        redCard.Rate *= 0.8f;
     }
 }

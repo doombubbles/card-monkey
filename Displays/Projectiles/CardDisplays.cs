@@ -2,117 +2,115 @@
 using Il2CppAssets.Scripts.Unity.Display;
 using BTD_Mod_Helper.Api.Display;
 
-namespace CardMonkey.Displays.Projectiles
+namespace CardMonkey.Displays.Projectiles;
+// All the Card Projectile displays are so similar, I just kept them in one .cs file
+// I would've used the multiple instance loading like in CardMonkeyMultiDisplay,
+// but I wanted to be able to directly reference the different classes themselves
+
+public class RedCardDisplay : ModDisplay
 {
-    // All the Card Projectile displays are so similar, I just kept them in one .cs file
-    // I would've used the multiple instance loading like in CardMonkeyMultiDisplay,
-    // but I wanted to be able to directly reference the different classes themselves
+    public override string BaseDisplay => Generic2dDisplay;
 
-    public class RedCardDisplay : ModDisplay
+    public override void ModifyDisplayNode(UnityDisplayNode node)
     {
-        public override string BaseDisplay => Generic2dDisplay;
-
-        public override void ModifyDisplayNode(UnityDisplayNode node)
-        {
-            Set2DTexture(node, Name);
-        }
+        Set2DTexture(node, Name);
     }
+}
 
-    public class BlueCardDisplay : ModDisplay
+public class BlueCardDisplay : ModDisplay
+{
+    public override string BaseDisplay => Generic2dDisplay;
+
+    public override void ModifyDisplayNode(UnityDisplayNode node)
     {
-        public override string BaseDisplay => Generic2dDisplay;
-
-        public override void ModifyDisplayNode(UnityDisplayNode node)
-        {
-            Set2DTexture(node, Name);
-        }
+        Set2DTexture(node, Name);
     }
+}
 
-    public class GoldCardDisplay : ModDisplay
+public class GoldCardDisplay : ModDisplay
+{
+    public override string BaseDisplay => Generic2dDisplay;
+
+    public override void ModifyDisplayNode(UnityDisplayNode node)
     {
-        public override string BaseDisplay => Generic2dDisplay;
-
-        public override void ModifyDisplayNode(UnityDisplayNode node)
-        {
-            Set2DTexture(node, Name);
-        }
+        Set2DTexture(node, Name);
     }
+}
 
-    public class RedWildCardDisplay : ModDisplay
+public class RedWildCardDisplay : ModDisplay
+{
+    public override string BaseDisplay => Generic2dDisplay;
+
+    public override void ModifyDisplayNode(UnityDisplayNode node)
     {
-        public override string BaseDisplay => Generic2dDisplay;
-
-        public override void ModifyDisplayNode(UnityDisplayNode node)
-        {
-            Set2DTexture(node, Name);
-        }
+        Set2DTexture(node, Name);
     }
+}
 
-    public class GoldWildCardDisplay : ModDisplay
+public class GoldWildCardDisplay : ModDisplay
+{
+    public override string BaseDisplay => Generic2dDisplay;
+
+    public override void ModifyDisplayNode(UnityDisplayNode node)
     {
-        public override string BaseDisplay => Generic2dDisplay;
-
-        public override void ModifyDisplayNode(UnityDisplayNode node)
-        {
-            Set2DTexture(node, Name);
-        }
+        Set2DTexture(node, Name);
     }
+}
 
-    public class BlueWildCardDisplay : ModDisplay
+public class BlueWildCardDisplay : ModDisplay
+{
+    public override string BaseDisplay => Generic2dDisplay;
+
+    public override void ModifyDisplayNode(UnityDisplayNode node)
     {
-        public override string BaseDisplay => Generic2dDisplay;
-
-        public override void ModifyDisplayNode(UnityDisplayNode node)
-        {
-            Set2DTexture(node, Name);
-        }
+        Set2DTexture(node, Name);
     }
+}
 
-    public class WildAceCardDisplay : ModDisplay
+public class WildAceCardDisplay : ModDisplay
+{
+    public override string BaseDisplay => Generic2dDisplay;
+
+    public override void ModifyDisplayNode(UnityDisplayNode node)
     {
-        public override string BaseDisplay => Generic2dDisplay;
-
-        public override void ModifyDisplayNode(UnityDisplayNode node)
-        {
-            Set2DTexture(node, Name);
-        }
+        Set2DTexture(node, Name);
     }
+}
 
-    public class AceInTheHoleAbilityDisplay : ModDisplay
+public class AceInTheHoleAbilityDisplay : ModDisplay
+{
+    public override string BaseDisplay => Generic2dDisplay;
+
+    public override float Scale => 2f;
+
+    public override Vector3 PositionOffset => new(0, 5f, 0);
+
+    public override void ModifyDisplayNode(UnityDisplayNode node)
     {
-        public override string BaseDisplay => Generic2dDisplay;
-
-        public override float Scale => 2f;
-
-        public override Vector3 PositionOffset => new(0, 5f, 0);
-
-        public override void ModifyDisplayNode(UnityDisplayNode node)
-        {
-            Set2DTexture(node, nameof(WildAceCardDisplay));
-        }
+        Set2DTexture(node, nameof(WildAceCardDisplay));
     }
+}
 
-    public class AceOfSpadesCardDisplay : ModDisplay
+public class AceOfSpadesCardDisplay : ModDisplay
+{
+    public override string BaseDisplay => Generic2dDisplay;
+
+    public override void ModifyDisplayNode(UnityDisplayNode node)
     {
-        public override string BaseDisplay => Generic2dDisplay;
-
-        public override void ModifyDisplayNode(UnityDisplayNode node)
-        {
-            Set2DTexture(node, Name);
-        }
+        Set2DTexture(node, Name);
     }
+}
 
-    public class AceOfSpadesAbilityDisplay : ModDisplay
+public class AceOfSpadesAbilityDisplay : ModDisplay
+{
+    public override string BaseDisplay => Generic2dDisplay;
+
+    public override float Scale => 2f;
+
+    public override Vector3 PositionOffset => new(0, 5f, 0);
+
+    public override void ModifyDisplayNode(UnityDisplayNode node)
     {
-        public override string BaseDisplay => Generic2dDisplay;
-
-        public override float Scale => 2f;
-
-        public override Vector3 PositionOffset => new(0, 5f, 0);
-
-        public override void ModifyDisplayNode(UnityDisplayNode node)
-        {
-            Set2DTexture(node, nameof(AceOfSpadesCardDisplay));
-        }
+        Set2DTexture(node, nameof(AceOfSpadesCardDisplay));
     }
 }

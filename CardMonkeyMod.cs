@@ -9,16 +9,15 @@ using UnityEngine;
 [assembly: MelonInfo(typeof(CardMonkeyMod), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 
-namespace CardMonkey
-{
-    public class CardMonkeyMod : BloonsTD6Mod
-    {
-        public static readonly ModSettingHotkey CardMonkeyHotkey = new(KeyCode.W, HotkeyModifier.Shift)
-        {
-            icon = ModContent.GetTextureGUID<CardMonkeyMod>("CardMonkey-Icon"),
-        };
-        
-        // No Harmony Patches or hooks required for this whole tower!
+namespace CardMonkey;
 
-    }
+public class CardMonkeyMod : BloonsTD6Mod
+{
+    public static readonly ModSettingHotkey CardMonkeyHotkey = new(KeyCode.W, HotkeyModifier.Shift)
+    {
+        icon = ModContent.GetTextureGUID<CardMonkeyMod>("CardMonkey-Icon"),
+    };
+        
+    // No Harmony Patches or hooks required for this whole tower!
+
 }

@@ -31,6 +31,8 @@ public class CardMonkey : ModTower
 
     public override ModSettingHotkey Hotkey => CardMonkeyMod.CardMonkeyHotkey;
 
+    public override bool IncludeInRogueLegends => true;
+
     public override void ModifyBaseTowerModel(TowerModel towerModel)
     {
         towerModel.range += 10;

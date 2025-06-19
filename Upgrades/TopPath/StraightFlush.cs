@@ -24,7 +24,7 @@ public class StraightFlush : ModUpgrade<CardMonkey>
             weaponModel.emission = new EmissionWithOffsetsModel("EmissionWithOffsetsModel_", new[]
             {
                 new ThrowMarkerOffsetModel("ThrowMarkerOffsetModel_", -4, 0, 0, 0)
-            }, 1, false, null, 0);
+            }, 1, false, null, 0, false);
 
 
             for (var i = 1; i <= 4; i++)

@@ -41,7 +41,7 @@ public class AceInTheHole : ModUpgrade<CardMonkey>
         abilityModel.AddBehavior(activateAttackModel);
 
         var attackModel = activateAttackModel.attacks[0] =
-            Game.instance.model.GetTower(TowerType.BoomerangMonkey, 4).GetAttackModel().Duplicate();
+                              Game.instance.model.GetTower(TowerType.BoomerangMonkey, 4).GetAttackModel().Duplicate();
         activateAttackModel.AddChildDependant(attackModel);
 
         attackModel.behaviors = attackModel.behaviors
@@ -59,8 +59,7 @@ public class AceInTheHole : ModUpgrade<CardMonkey>
 
 
         var weapon = attackModel.weapons[0];
-        weapon.emission.AddBehavior(
-            new EmissionRotationOffBloonDirectionModel("EmissionRotationOffBloonDirectionModel", false, false));
+        weapon.emission.AddBehavior(new EmissionRotationOffBloonDirectionModel("", false, false));
 
         var projectileModel = weapon.projectile;
 

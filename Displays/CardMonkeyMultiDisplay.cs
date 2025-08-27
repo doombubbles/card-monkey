@@ -16,7 +16,7 @@ namespace CardMonkey.Displays;
 /// </summary>
 public class CardMonkeyMultiDisplay : ModTowerDisplay<CardMonkey>
 {
-    private readonly int[] t = null!; // The tiers used for a particular instance of CardMonkeyBaseDisplay
+    private readonly int[] t = []; // The tiers used for a particular instance of CardMonkeyBaseDisplay
 
     /// <summary>
     /// All classes that derive from ModContent MUST have a zero argument constructor to work

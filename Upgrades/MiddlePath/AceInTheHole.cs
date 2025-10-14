@@ -1,4 +1,5 @@
-﻿using Il2CppAssets.Scripts.Models;
+﻿using BTD_Mod_Helper.Api.Helpers;
+using Il2CppAssets.Scripts.Models;
 using Il2CppAssets.Scripts.Models.Towers;
 using Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities;
 using Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors;
@@ -30,18 +31,12 @@ public class AceInTheHole : ModUpgrade<CardMonkey>
 
     public override void ApplyUpgrade(TowerModel tower)
     {
-        var abilityModel = new AbilityModel("AbilityModel_AceInTheHole", "Ace in the Hole",
-            "Throws a super powerful Ace card that seeks Bloons along the track.", 1, 0,
-            GetSpriteReference(Icon), 44f, null, false, false, null,
-            0, 0, 9999999, false, false);
-        tower.AddBehavior(abilityModel);
 
         var activateAttackModel = new ActivateAttackModel("ActivateAttackModel_AceInTheHole", 0, true,
             new Il2CppReferenceArray<AttackModel>(1), true, false, false, false, false, false);
-        abilityModel.AddBehavior(activateAttackModel);
 
         var attackModel = activateAttackModel.attacks[0] =
-                              Game.instance.model.GetTower(TowerType.BoomerangMonkey, 4).GetAttackModel().Duplicate();
+            Game.instance.model.GetTower(TowerType.BoomerangMonkey, 4).GetAttackModel().Duplicate();
         activateAttackModel.AddChildDependant(attackModel);
 
         attackModel.behaviors = attackModel.behaviors
@@ -77,5 +72,18 @@ public class AceInTheHole : ModUpgrade<CardMonkey>
         projectileModel.GetBehavior<TravelStraitModel>().Speed = 500f;
         projectileModel.GetBehavior<TravelStraitModel>().Lifespan = 5.0f;
         projectileModel.hasDamageModifiers = true;
+
+        tower.AddBehavior(new AbilityHelper("AceInTheHole")
+        {
+            DisplayName = "Ace in the Hole",
+            Description = "Throws a super powerful Ace card that seeks Bloons along the track.",
+            Animation = 1,
+            IconReference = GetSpriteReference(Icon),
+            Cooldown = 44,
+            Behaviors =
+            [
+                activateAttackModel
+            ]
+        });
     }
 }

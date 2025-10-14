@@ -14,4 +14,8 @@
     </ItemGroup>
     
     <Import Project="..\btd6.targets" />
+    
+    <ItemGroup>
+        <EmbeddedResource Remove="OldDisplays/**" />
+    </ItemGroup>
 </Project>

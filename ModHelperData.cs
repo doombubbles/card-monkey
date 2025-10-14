@@ -2,8 +2,8 @@
 
 public static class ModHelperData
 {
-    public const string WorksOnVersion = "50.0";
-    public const string Version = "1.2.16";
+    public const string WorksOnVersion = "51.0";
+    public const string Version = "1.2.17";
     public const string Name = "Card Monkey";
     public const string Description = "Adds in a new custom tower themed around playing cards.";
 

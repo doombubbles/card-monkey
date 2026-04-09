@@ -17,8 +17,9 @@
     
     <ItemGroup>
         <EmbeddedResource Remove="OldDisplays/**" />
-        <EmbeddedResource Include="OldDisplays\AceOfSpadesDisplay_51.png" />
-        <EmbeddedResource Include="OldDisplays\RoyalFlushDisplay_51.png" />
+        <EmbeddedResource Include="OldDisplays\AceOfSpadesDisplay_53.png" />
+        <EmbeddedResource Include="OldDisplays\RoyalFlushDisplay_53.png" />
+        <EmbeddedResource Include="OldDisplays\TFDisplay_53.png" />
         <EmbeddedResource Include="OldDisplays\TFDisplay_51.png" />
     </ItemGroup>
 </Project>

@@ -1,1 +1,1 @@
-- Fixed visuals for BTD6 v52
+- Fixed visuals for BTD6 v54
